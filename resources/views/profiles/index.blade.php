@@ -21,20 +21,20 @@
                             
                         @if ($user_id == $user->user_id)
                             
-                                <a href="{{ url('user/profile/'.$user->user_id.'/edit') }}"><button type="button" class="btn btn-success">Chỉnh sửa</button></a> 
+                                <a href="{{ url('user/profile/'.$user->user_id.'/edit') }}"><button type="button" class="btn btn-success">Edit</button></a> 
                         @endif
 
                         
                             <div class="d-flex"><span class="join">
-                                Tham gia: {{ $user->created_at->format('d/m/Y') }}</span>
+                                Joined date: {{ $user->created_at->format('d/m/Y') }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="line-info">
                         <div class="d-flex">
-                            <div class="info"><span class="label">Ngày sinh </span><span
+                            <div class="info"><span class="label">Date of birth </span><span
                                     class="ctn">{{ $user->dob }}</span></div>
-                            <div class="info"><span class="label">Giới tính </span><span
+                            <div class="info"><span class="label">Gender </span><span
                                     class="ctn">{{ $user->gender ? "Nam" : "Nữ" }}</span>
                             </div>
                         </div>
@@ -45,11 +45,11 @@
                 <div class="information information--acc">
                     <div class="inside">
                         <ul>
-                            <li><span class="label">Điện thoại</span><span>{{ $user->mobile ? "Đã đăng ký":"Chưa có" }}</span></li>
-                            <li><span class="label">GPLX</span><span>{{ $user->driver_id_image_approval ? "Đã duyệt": "Chưa duyệt"}}</span></li>
+                            <li><span class="label">Mobile</span><span>{{ $user->mobile ? "Registered":"Unavailable" }}</span></li>
+                            <li><span class="label">Driver license</span><span>{{ $user->driver_id_image_approval ? "Verified": "Unverified"}}</span></li>
                             <li><span class="label">Email</span><span class="ctn">{{ $user->email }}</span></li>
-                            <li><span class="label">Facebook</span><span class="ctn"><span>{{ $user->facebook_id ? "Đã kết nối" : "Chưa kết nối" }}
-                            <li><span class="label">Google</span><span class="ctn"><span>{{ $user->google_id ? "Đã kết nối" : "Chưa kết nối" }}
+                            <li><span class="label">Facebook</span><span class="ctn"><span>{{ $user->facebook_id ? "Connected" : "None" }}
+                            <li><span class="label">Google</span><span class="ctn"><span>{{ $user->google_id ? "Đã kết nối" : "None" }}
                         </ul>
                     </div>
                 </div>

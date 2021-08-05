@@ -3,9 +3,6 @@
 
 
 @section('bodycode')
-
-
-
     <div style="margin-top:5%">
         <div class="tm-section tm-bg-img" id="tm-section-1">
             <div class="tm-bg-white ie-container-width-fix-2">
@@ -17,10 +14,10 @@
                                     <div class="form-group tm-form-element tm-form-element-100">
                                         <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
                                         <input name="city" type="text" class="form-control" id="search_input" list="geoname"
-                                            onchange="return checktoado()" placeholder="Nhập thành phố, quận, địa chỉ...">
+                                            onchange="return checktoado()" placeholder="Input city, address, ex: Ho chi minh">
                                         <datalist id="geoname">
                                             <option>
-                                                Sử dụng vị trí của bạn
+                                                Use your current location
                                             </option>
                                         </datalist>
                                     </div>
@@ -31,7 +28,7 @@
                                     <div class="form-group tm-form-element tm-form-element-2">
                                         <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
                                         <input name="checkin" type="text" class="form-control" id="inputCheckIn"
-                                            placeholder="Bắt đầu">
+                                            placeholder="Start at">
                                     </div>
                                     <div class="form-group tm-form-element tm-form-element-2">
                                         <select name="hourstart" class="form-control tm-select" id="children1">
@@ -67,7 +64,7 @@
                                     <div class="form-group tm-form-element tm-form-element-2">
                                         <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
                                         <input name="checkout" type="text" class="form-control" id="inputCheckOut"
-                                            placeholder="Kết thúc">
+                                            placeholder="Finish at">
                                     </div>
                                     <div class="form-group tm-form-element tm-form-element-2">
                                         <select name="hourend" class="form-control tm-select" id="children">
@@ -101,13 +98,13 @@
                                 </div>
                                 <div class="form-group tm-form-element tm-form-element-100">
                                     <button type="button" onclick="return checksubmit1()"
-                                        class="btn btn-primary tm-btn-search">Tìm xe ngay</button>
+                                        class="btn btn-primary tm-btn-search">Find rental car</button>
                                 </div>
 
-                                <button type="submit" id="nutsubmit1" hidden>Tìm xe ngay</button>
+                                <button type="submit" id="nutsubmit1" hidden>Find rental car</button>
 
                                 <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                    <p class="tm-margin-b-0">Lựa thông tin trên để tìm kiếm xe phù hợp.</p>
+                                    <p class="tm-margin-b-0">Provide details above to find suitable car.</p>
                                 </div>
                             </form>
                         </div>
@@ -125,20 +122,19 @@
                                 <img src="images/features-1.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Ít giấy tờ yêu cầu, thủ tục nhanh gọn
+                                        <h3 class="text-uppercase tm-article-title-2">Quick & simple process
                                         </h3>
                                     </header>
-                                    <p>Passport, CMND và giấy phép lái xe</p>
+                                    <p>Passport or ID & driver license</p>
                                 </div>
                             </article>
                             <article class="tm-bg-white mr-2 tm-carousel-item">
                                 <img src="images/features-2.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Hỗ trợ giao xe tận nhà, giao xe tại
-                                            sân bay</h3>
+                                        <h3 class="text-uppercase tm-article-title-2">Vehicle delivery</h3>
                                     </header>
-                                    <p>Phí giao xe miễn phí hoặc thấp
+                                    <p>Low to free cost of delivery
                                     <p>
                                 </div>
                             </article>
@@ -146,10 +142,10 @@
                                 <img src="images/features-3.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Sử dụng các loại hình thanh toán như
+                                        <h3 class="text-uppercase tm-article-title-2">Various choice of payment:
                                         </h3>
                                     </header>
-                                    <p>ATM/VISA, cửa hàng tiện lợi, ví điện tử
+                                    <p>ATM/VISA, convenient store, e-wallet
                                     <p>
                                 </div>
                             </article>
@@ -157,7 +153,7 @@
                                 <img src="images/features-4.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Chọn lựa theo các dòng xe bao gồm</h3>
+                                        <h3 class="text-uppercase tm-article-title-2">Wide range of option</h3>
                                     </header>
                                     <p>Sedan, Hatchback, Crossover, SUV, Pickup...
                                     <p>
@@ -167,18 +163,18 @@
                                 <img src="images/features-5.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Vững tay lái với gói bảo hiểm từ </h3>
+                                        <h3 class="text-uppercase tm-article-title-2">Worry free with insurance</h3>
                                     </header>
-                                    <p>Bảo hiểm Quân Đội MIC, Petrolimex PJICO</p>
+                                    <p>MIC, Petrolimex PJICO</p>
                                 </div>
                             </article>
                             <article class="tm-bg-white tm-carousel-item">
                                 <img src="images/features-6.jpg" alt="Image" class="img-fluid">
                                 <div class="tm-article-pad">
                                     <header>
-                                        <h3 class="text-uppercase tm-article-title-2">Không tính phí nếu hủy chuyến</h3>
+                                        <h3 class="text-uppercase tm-article-title-2">Free of charge for cancel</h3>
                                     </header>
-                                    <p>Không tính phí nếu hủy chuyến
+                                    <p>No cost!
                                     <p>
                                 </div>
                             </article>

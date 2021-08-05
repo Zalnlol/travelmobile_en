@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="text-center">Reset mật khẩu</h2>
+                        <h2 class="text-center">Reset password</h2>
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -38,7 +38,7 @@
                             <div class="form-group" align="center">
                                 <div class="col-md-6">
                                     <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">
-                                        {{ __('Gửi đường link reset') }}
+                                        {{ __('Send password reset link') }}
                                     </button>
                                 </div>
                             </div>

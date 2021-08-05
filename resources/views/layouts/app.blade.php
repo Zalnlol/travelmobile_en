@@ -62,11 +62,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/profile') }}">Trang cá nhân</a>
-                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mycars')}}">Xe của tôi</a>
-                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mytrips')}}">Chuyến của tôi</a>
-                                    <a class="dropdown-item" id="dropdown-list" href="#">Đổi mật khẩu</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Đăng xuất') }}</a>
+                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/profile') }}">My account</a>
+                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mycars')}}">My cars</a>
+                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mytrips')}}">My trips</a>
+                                    <a class="dropdown-item" id="dropdown-list" href="#">Change password</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

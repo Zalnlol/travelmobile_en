@@ -13,7 +13,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active">User List</li>
+                    <li class="breadcrumb-item active">Table contain all user account</li>
                 </ol>
             </div>
         </div>
@@ -26,7 +26,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Account Data</h3>
+          <h3 class="card-title">List of all accounts including admin</h3>
   
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -65,21 +65,17 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->mobile}}</td>
-                        <td>{{$user->gender ? "Nam" : "Nữ"}}</td>
-                        <td>{{$user->dob}}</td>
-                        <td>{{$user->driver_id ? "Có" : "Chưa đăng ký"}}</td>
-                        <td>{{$user->driver_id_image_approval ? "Đã duyệt" : "Chưa duyệt"}}</td>
+                        <td>{{$user->driver_id ? "Registered" : "None"}}</td>
+                        <td>{{$user->driver_id_image_approval ? "Approved" : "None"}}</td>
                         <td>{{$user->created_at}}</td>
-                        <td>{{$user->status ? "Khóa" : "Hoạt động"}}</td>
+                        <td>{{$user->status ? "Blocked" : "Active"}}</td>
 
                         <td class="project-actions text-right">
                             <a class="btn btn-primary btn-sm" href="{{ url('admin/update/'.$user->user_id) }}" >
-                                <i class="fas fa-pencil-alt">View</i>
+                                <i class="fas fa-pencil-alt"> Detail</i>
                             </a>
-                            <a class="btn btn-danger btn-sm" href="{{ url('admin/delete/'.$user->user_id) }}" onclick="javascript:return confirm('Bạn có chắc chắn ?')">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
+                            <a class="btn btn-danger btn-sm" href="{{ url('admin/delete/'.$user->user_id) }}" onclick="javascript:return confirm('Are you sure ?')">
+                                <i class="fas fa-trash"> Delete</i>
                             </a>
                         </td>
                     </tr>
