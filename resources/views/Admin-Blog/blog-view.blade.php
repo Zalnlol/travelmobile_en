@@ -12,7 +12,7 @@
                     <div class="card card-primary">
 
                         <div class="card-header">
-                            <h3 class="card-title">Chi tiet </h3>
+                            <h3 class="card-title"> Details </h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -26,14 +26,14 @@
                                         value="{{ $blog->blog_id }}" readonly>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-name">Tiêu đề</label>
+                                    <label for="txt-name">Title</label>
                                     {{-- <input type="text" class="form-control" id="title" name="title"
                                     placeholder="Nhập tiêu đề" required value="{{ $blog->title }}"> --}}
                                     <textarea class="form-control" rows="3" id="description" name="title" cols="40"
                                         rows="6" value="" readonly>{{ $blog->title }}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-price">Nội dung</label>
+                                    <label for="txt-price">Content</label>
                                     {{-- <input type="text" class="form-control ckeditor" id="content" name="content"
                                     placeholder="Nhập nội dung" required value="{{ $blog->content }}"> --}}
                                     <textarea class="form-control ckeditor" id="description" name="content" cols="70"
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="txt-price">Ảnh </label>
+                                    <label for="txt-price"> Image </label>
                                     <div id="image" name="blog_pic">
                                         <img width="550px" src="../../../img/blog/{{ $blog->blog_pic }}"/>
                                     </div>

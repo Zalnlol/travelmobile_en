@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title"> <a href="{{url('/admin/blog/createBlog')}}">Tạo mới blog</a></h3>
+        <h3 class="card-title"> <a href="{{url('/admin/blog/createBlog')}}">Create blog</a></h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -41,10 +41,10 @@
                 <tr>
                     
                     <th style="width: 1%;">ID</th>
-                    <th style="width: 20%">Tiêu đề</th>
-                    <th style="width: 35%">Nội dung</th>
+                    <th style="width: 20%">Title</th>
+                    <th style="width: 35%">Content</th>
                     
-                    <th style="width: 10%">Ngày đăng</th>
+                    <th style="width: 10%">Created at</th>
                     
                 </tr>
             </thead>
@@ -62,17 +62,17 @@
                        <a class="btn btn-primary btn-sm" href="{{url("/admin/blog/detail/{$item->blog_id}")}}">
                           <i class="fas fa-folder">
                           </i>
-                          Xem
+                          View
                         </a> 
                         <a class="btn btn-info btn-sm" href="{{url("/admin/blog/editBlog/{$item->blog_id}")}}">
                           <i class="fas fa-pencil-alt">
                           </i>
-                          Sửa
+                          Update
                       </a>
                       <a class="btn btn-danger btn-sm" href="{{url("/admin/blog/delete/{$item->blog_id}")}}" onclick="javascript:return confirm('Are you sure ?')">
                           <i class="fas fa-trash">
                           </i>
-                          Xóa
+                          Delete
                       </a>
                   </td>
                   
