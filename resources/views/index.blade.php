@@ -3,9 +3,6 @@
 
 
 @section('bodycode')
-
-
-
     <div style="margin-top:5%">
         <div class="tm-section tm-bg-img" id="tm-section-1">
             <div class="tm-bg-white ie-container-width-fix-2">

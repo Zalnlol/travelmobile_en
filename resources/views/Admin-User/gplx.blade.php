@@ -13,7 +13,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Bảng dữ liệu</li>
+                    <li class="breadcrumb-item active">Data table</li>
                 </ol>
             </div>
         </div>
@@ -26,7 +26,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Giấy phép lái xe chờ duyệt</h3>
+          <h3 class="card-title">License require approval</h3>
   
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -41,17 +41,15 @@
           <table class="table table-striped projects" style="text-align: center">
               <thead>
                   <tr>
-                      <th>User ID</th>
-                      <th>Họ tên</th>
-                      <th>Email</th>
-                      <th>Số điện thoại</th>
-                      <th>Giới tính</th>
-                      <th>Ngày sinh</th>
-                      <th>GPLX</th>
-                      <th>Duyệt GPLX</th>
-                      <th>Ngày tham gia</th>
-                      <th>Trạng thái</th>
-                      <th>Tùy chỉnh</th>
+                    <th>User ID</th>
+                    <th>Fullname</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Driver license</th>
+                    <th>License status</th>
+                    <th>Joined date</th>
+                    <th>Status</th>
+                    <th>Action</th>
                      
                   </tr>
               </thead>
@@ -65,8 +63,6 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->mobile}}</td>
-                        <td>{{$user->gender ? "Nam" : "Nữ"}}</td>
-                        <td>{{$user->dob}}</td>
                         <td>{{$user->driver_id ? "Có" : "Chưa đăng ký"}}</td>
                         <td>{{$user->driver_id_image_approval ? "Đã duyệt" : "Chưa duyệt"}}</td>
                         <td>{{$user->created_at}}</td>
@@ -74,12 +70,10 @@
 
                         <td class="project-actions text-right">
                             <a class="btn btn-primary btn-sm" href="{{ url('admin/update/'.$user->user_id) }}" >
-                                <i class="fas fa-pencil-alt">Chi tiết</i>
+                                <i class="fas fa-pencil-alt"> Detail</i>
                             </a>
-                            <a class="btn btn-danger btn-sm" href="{{ url('admin/delete/'.$user->user_id) }}" onclick="javascript:return confirm('Bạn có chắc chắn ?')">
-                                <i class="fas fa-trash">
-                                </i>
-                                Xóa
+                            <a class="btn btn-danger btn-sm" href="{{ url('admin/delete/'.$user->user_id) }}" onclick="javascript:return confirm('Are you sure ?')">
+                                <i class="fas fa-trash"> Delete</i>
                             </a>
                         </td>
                     </tr>
