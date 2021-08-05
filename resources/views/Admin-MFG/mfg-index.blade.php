@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Hãng Xe</h1>
+                    <h1>Brand Car</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Hãng Xe</li>
+                        <li class="breadcrumb-item active">Brand Car</li>
                     </ol>
                 </div>
             </div>
@@ -24,7 +24,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Hãng Xe</h3>
+                <h3 class="card-title">Brand Car</h3>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,10 +40,10 @@
                     <thead>
                         <tr>
                             <th style="width: 1%">#</th>
-                            <th>Mã hãng xe</th>
-                            <th>Tên hãng xe</th>
+                            <th>Car Id</th>
+                            <th>Name</th>
                             <th>Logo</th>
-                            <th>Xuất xứ</th>
+                            <th>Origin</th>
                             <th>Wedsite</th>
                             <th></th>
 
@@ -70,14 +70,14 @@
                                         href="{{ url('admin/mfg/update/' . $items->mfg_id) }}" method="post">
                                         <i class="fas fa-folder">
                                         </i>
-                                        Chỉnh sửa
+                                       Update
                                     </a>
 
                                     <a class="btn btn-danger btn-sm" href="{{ url('admin/mfg/delete/' . $items->mfg_id) }}"
                                         onclick="javascript:return confirm('Are you sure ?')">
                                         <i class="fas fa-trash">
                                         </i>
-                                        Xóa
+                                       Delete
                                     </a>
 
                                 </td>

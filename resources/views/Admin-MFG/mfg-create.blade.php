@@ -19,12 +19,12 @@
                             <div class="card-body">
                                 
                                 <div class="form-group">
-                                    <label for="txt-id">Mã hãng xe</label>
+                                    <label for="txt-id">MFG Car</label>
                                     <input type="text" class="form-control" id="txt-id" name="mfg_id" placeholder="Nhập mã hãng xe">
                                     <p class="help is-danger">{{ $errors->first('mfg_id') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-name">Tên hãng xe</label>
+                                    <label for="txt-name">MFG Name</label>
                                     <input type="text" class="form-control" id="txt-name" name="name"
                                         placeholder="Nhập tên hãng xe">
                                         <p class="help is-danger">{{ $errors->first('name') }}</p>
@@ -42,7 +42,7 @@
                                     <p class="help is-danger">{{ $errors->first('logo') }}</p>
                                 </div>
                                 <div>
-                                    <label for="txt-name">Chọn Xuất xứ:</label>
+                                    <label for="txt-name">Origin:</label>
                                     <select name="nation" class="form-control" id="txt-name">
                                         <option value="">-----  Chọn xuất xứ  -----</option>
                                         <option value="England">Anh ( England )</option>

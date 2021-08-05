@@ -40,13 +40,13 @@
                     <thead>
                         <tr>
                             <th style="width: 1%">#</th>
-                            <th>Mã dòng xe</th>
-                            <th>Mã hãng xe</th>
+                            <th>Model Id</th>
+                            <th>Brand Id</th>
                             <th>Model</th>
-                            <th>Giá đề xuất</th>
-                            <th>Nhiên liệu</th>
-                            <th>Số ghế</th>
-                            <th>Kiểu dáng</th>
+                            <th>List price</th>
+                            <th>Fuel</th>
+                            <th>Seat num</th>
+                            <th>Style</th>
 
                         </tr>
                     </thead>
@@ -76,7 +76,7 @@
                                         href="{{ url('admin/model/update/' . $items->type_id) }}">
                                         <i class="fas fa-folder">
                                         </i>
-                                        Chỉnh sửa
+                                        Update
                                     </a>
 
                                     <a class="btn btn-danger btn-sm"
@@ -84,7 +84,7 @@
                                         onclick="javascript:return confirm('Are you sure ?')">
                                         <i class="fas fa-trash">
                                         </i>
-                                        Xóa
+                                        Delete
                                     </a>
                                 </td>
                         </tr>

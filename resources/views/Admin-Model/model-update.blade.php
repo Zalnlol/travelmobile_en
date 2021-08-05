@@ -19,7 +19,7 @@
                             {{ csrf_field() }}
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="txt-id">Mã model xe</label>
+                                    <label for="txt-id">Id model car</label>
                                     <input type="text" class="form-control" id="txt-id" name="type_id" placeholder="{{$m->type_id}}" value="{{$m->type_id}}" readonly>
                                     <p class="help is-danger">{{ $errors->first('type_id') }}</p>
                                 </div>
@@ -29,7 +29,7 @@
                                         placeholder="Nhập mã hãng xe">
                                 </div> --}}
                                 <div>
-                                    <label for="txt-name">Hãng xe</label>
+                                    <label for="txt-name">Brand car</label>
                                     <input type="text" class="form-control" id="txt-id" name="mfg_id" placeholder="{{$m->mfg_id}}" value="{{$m->mfg_id}}" readonly>
                                     {{-- <select name="mfg_id" class="form-control" id="txt-name">
                                         {{-- <option value="AUD">AUD</option>
@@ -45,12 +45,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="txt-price">Model xe</label>
+                                    <label for="txt-price">Model car</label>
                                     <input type="text" class="form-control" id="txt-price" name="model" placeholder="{{$m->model}}" value="{{$m->model}}" readonly>
                                         <p class="help is-danger">{{ $errors->first('model') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-name">Giá đề xuất</label>
+                                    <label for="txt-name">List price</label>
                                     <input type="text" class="form-control" id="txt-name" name="suggest_price" placeholder="{{$m->suggest_price}}" value="{{$m->suggest_price}}">
                                         <p class="help is-danger">{{ $errors->first('suggest_price') }}</p>
                                 </div>
@@ -60,16 +60,16 @@
                                         placeholder="Nhập kiểu nhiên liệu">
                                 </div> --}}
                                 <div class="form-group">
-                                    <label >Kiểu nhiên liệu</label><br/>
+                                    <label >Fuel</label><br/>
                                     <input type="radio" id="txt-name" name="fuel_type" value="0">
-                                    <label for="txt-name">Xăng</label><br>
+                                    <label for="txt-name">Gas</label><br>
                                     <input type="radio" id="txt-name" name="fuel_type" value="1">
-                                    <label for="txt-name">Dầu</label><br>
+                                    <label for="txt-name">Oil</label><br>
                                     <p class="help is-danger">{{ $errors->first('fuel_type') }}</p>
                                 </div>
                                 <div class="form-group">
                                     
-                                    <label for="txt-name">Số ghế</label>
+                                    <label for="txt-name">Seatnum</label>
                                     <input type="text" class="form-control" id="txt-name" name="seatnum"
                                         placeholder="{{$m->seatnum}}" value ="{{$m->seatnum}}">
                                         <p class="help is-danger">{{ $errors->first('seatnum') }}</p>
@@ -80,7 +80,7 @@
                                         placeholder="Nhập giá đề xuất">
                                 </div> --}}
                                 <div>
-                                    <label for="txt-name">Chọn kiểu dáng xe:</label>
+                                    <label for="txt-name">Style:</label>
                                     <select name="car_style" class="form-control" id="txt-name">
                                         <option value="SEDAN">Sedan</option>
                                         <option value="HATCHBACK">Hatchback</option>

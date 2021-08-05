@@ -24,7 +24,7 @@
                                         placeholder="Nhập mã hãng xe">
                                 </div> --}}
                                 <div>
-                                    <label for="txt-name">Chọn hãng xe:</label>
+                                    <label for="txt-name">Brand car:</label>
                                     <select name="mfg_id" class="form-control" id="txt-name">
                                         {{-- <option value="AUD">AUD</option>
                                         <option value="MER">MER</option>
@@ -39,13 +39,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="txt-price">Model xe</label>
+                                    <label for="txt-price">Model car</label>
                                     <input type="text" class="form-control" id="txt-price" name="model"
                                         placeholder="Nhập model xe" value="">
                                         <p class="help is-danger">{{ $errors->first('model') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-name">Giá đề xuất</label>
+                                    <label for="txt-name">List price</label>
                                     <input type="text" class="form-control" id="txt-name" name="suggest_price"
                                         placeholder="Nhập giá đề xuất">
                                         <p class="help is-danger">{{ $errors->first('suggest_price') }}</p>
@@ -56,16 +56,16 @@
                                         placeholder="Nhập kiểu nhiên liệu">
                                 </div> --}}
                                 <div class="form-group">
-                                    <label >Kiểu nhiên liệu</label><br/>
+                                    <label >Fuel</label><br/>
                                     <input type="radio" id="txt-name" name="fuel_type" value="0">
-                                    <label for="txt-name">Xăng</label><br>
+                                    <label for="txt-name">Gas</label><br>
                                     <input type="radio" id="txt-name" name="fuel_type" value="1">
-                                    <label for="txt-name">Dầu</label><br>
+                                    <label for="txt-name">Oil</label><br>
                                     <p class="help is-danger">{{ $errors->first('fuel_type') }}</p>
                                 </div>
                                 <div class="form-group">
                                     
-                                    <label for="txt-name">Số ghế</label>
+                                    <label for="txt-name">Seatnum</label>
                                     <input type="text" class="form-control" id="txt-name" name="seatnum"
                                         placeholder="Nhập số ghế">
                                         <p class="help is-danger">{{ $errors->first('seatnum') }}</p>
@@ -76,7 +76,7 @@
                                         placeholder="Nhập giá đề xuất">
                                 </div> --}}
                                 <div>
-                                    <label for="txt-name">Chọn kiểu dáng xe:</label>
+                                    <label for="txt-name">Style:</label>
                                     <select name="car_style" class="form-control" id="txt-name">
                                         <option value="SEDAN">Sedan</option>
                                         <option value="HATCHBACK">Hatchback</option>

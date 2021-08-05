@@ -9,7 +9,7 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                    <h3 class="card-title">Tạo tài khoản Admin</h3>
+                    <h3 class="card-title">Create Admin Account</h3>
                     </div>
                     {{-- <div class="card-comment">
                         <p>
@@ -32,7 +32,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="txtname">Họ tên</label>
+                                <label for="txtname">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Nhập họ tên">
                             </div>
 
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="txtname">Mật khẩu</label>
+                                <label for="txtname">Password</label>
                                 <input type="password" class="form-control" id="txt-password" name="password" placeholder="Nhập mật khẩu">
                             </div>
 
