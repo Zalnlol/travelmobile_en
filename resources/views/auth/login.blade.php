@@ -4,7 +4,7 @@
 <body id="body">
     <div id="login-card" class="card">
         <div class="card-body">
-            <h2 class="text-center">Đăng nhập</h2>
+            <h2 class="text-center">Login</h2>
             <br>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -46,7 +46,7 @@
                     @if (Route::has('password.request'))
                         <div class="text-right">
                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                <b>{{ __('Quên mật khẩu?') }}</b>
+                                <b>{{ __('Forgot password?') }}</b>
                             </a>
                         </div>
                     @endif
@@ -54,12 +54,12 @@
 
                 <div class="form-group">
                         <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">
-                            {{ __('Xác nhận') }}
+                            {{ __('Confirm') }}
                         </button>
                 </div>
 
                 <div class="text-center">
-                    Bạn chưa là thành viên? <a href="register"><b>Hãy đăng kí ngay!</b></a>
+                    Not a member? <a href="register"><b>Register now!</b></a>
                 </div>
                 <hr>
                 <br>

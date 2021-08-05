@@ -7,7 +7,7 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="form-group">
-                    <label for="name">{{ __('Họ và tên') }}</label>
+                    <label for="name">{{ __('Full name') }}</label>
 
                     <div class="form-check">
                         <input id="txt-fullname" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password">{{ __('Mật khẩu') }}</label>
+                    <label for="password">{{ __('Password') }}</label>
 
                     <div class="form-check">
                         <input id="txt-password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">

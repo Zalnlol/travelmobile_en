@@ -58,27 +58,27 @@
                           <div id="mainNav" class="collapse navbar-collapse tm-bg-white" style="margin-left: 32%">
                             <ul class="navbar-nav ml-auto">
                               <li class="nav-item" style="width: 8rem"> 
-                                <a class="nav-link" href="{{url('/')}}">Trang chủ <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{url('/')}}">Home page <span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item" style="width: 8rem">
-                                <a class="nav-link" href="tutorial1">Hướng dẫn</a>
+                                <a class="nav-link" href="tutorial1">How to</a>
                               </li>
 
                               <li class="nav-item" style="width: 8rem">
-                                <a class="nav-link" href="{{url('blog')}}">Trang Blog</a>
+                                <a class="nav-link" href="{{url('blog')}}">Blog</a>
                               </li>
 
                                 <!-- Authentication Links -->
                                 @guest
                                     @if (Route::has('login'))
                                         <li class="nav-item" style="width: 8rem">
-                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                         </li>
                                     @endif
 
                                     @if (Route::has('register'))
                                         <li class="nav-item" style="width: 8rem">
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng ký') }}</a>
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </li>
                                     @endif
                                 @else
@@ -87,11 +87,11 @@
                                         <img src="{{ asset('img/'. Auth::user()->avatar_image) }}" style="background-size: cover;width:40px; height:40px " class="rounded-circle"><span >{{ Auth::user()->name }}</span>
                                     </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/profile') }}">Trang cá nhân</a>
-                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mycars')}}">Xe của tôi</a>
-                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mytrips')}}">Chuyến của tôi</a>
-                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/change-password')}}">Đổi mật khẩu</a>
-                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Đăng xuất') }}</a>
+                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/profile') }}">My account</a>
+                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mycars')}}">My cars</a>
+                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mytrips')}}">My trips</a>
+                                            <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/change-password')}}">Change password</a>
+                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                 @csrf
