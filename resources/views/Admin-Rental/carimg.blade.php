@@ -8,12 +8,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Danh sách xe đăng ký</h1>
+          <h1>Image Rental Car </h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-            <li class="breadcrumb-item active">Ảnh xe</li>
+            <li class="breadcrumb-item active">Image Car</li>
           </ol>
         </div>
       </div>
@@ -26,7 +26,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Ảnh xe</h3>
+        <h3 class="card-title">Image Car</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-minus"></i>
@@ -40,11 +40,11 @@
         <table class="table table-striped projects" style="text-align: center">
             <thead>
                 <tr>
-                    <th style="width: 20%">Ảnh 1</th>
-                    <th style="width: 20%">Ảnh 2</th>
-                    <th style="width: 20%">Ảnh 3</th>
-                    <th style="width: 20%">Ảnh 4</th>
-                    <th >Ngày đăng ký</th>
+                    <th style="width: 20%">Image 1</th>
+                    <th style="width: 20%">Image 2</th>
+                    <th style="width: 20%">Image 3</th>
+                    <th style="width: 20%">Image 4</th>
+                    <th >Join date</th>
                 </tr>
             </thead>
             <tbody>

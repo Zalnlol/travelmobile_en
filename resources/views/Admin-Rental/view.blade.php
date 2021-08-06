@@ -230,7 +230,7 @@ font-weight: bolder;}
         <div class="form-header-group  header-default">
           <div class="header-text httal htvam">
             <h2 id="header_1" class="form-header" data-component="header">
-               <strong> Phê duyệt </strong>
+               <strong> Approval </strong>
             </h2>
 
           </div>
@@ -239,7 +239,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_4">
         <div id="cid_4" class="form-input-wide">
           <div id="text_4" class="form-html" data-component="text">
-            <h5><strong>Thông tin xe</strong></h5>
+            <h5><strong>Car Information</strong></h5>
           </div>
         </div>
       </li>
@@ -248,7 +248,7 @@ font-weight: bolder;}
         @csrf
         <input type="hidden" id="input_5" name="car_id" data-type="input-textbox" readonly class="form-textbox" size="20" value="{{ $rentalview->car_id }}" placeholder=" " data-component="textbox" aria-labelledby="label_5" />
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="input_5"> Biển số xe </label>
+          <label class="form-label form-label-top" id="label_5" for="input_5"> Plate id </label>
           <div id="cid_5" class="form-input-wide">
               <input type="text" id="input_5" name="plate_id" data-type="input-textbox"
                   class="form-textbox" size="20" value="{{ $rentalview->plate_id }}" placeholder="" readonly data-component="textbox"
@@ -265,7 +265,7 @@ font-weight: bolder;}
     </li>
     
     <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-      <label class="form-label form-label-top" id="label_32" for="input_32"> Hãng xe </label>
+      <label class="form-label form-label-top" id="label_32" for="input_32"> Brand car </label>
       <div id="cid_32" class="form-input-wide">
           <select class="form-dropdown" id="input_6" name="brand" disabled onchange="return check()"
               style="width:150px" data-component="dropdown">
@@ -281,7 +281,7 @@ font-weight: bolder;}
   </li>
 
       <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Mẫu xe </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model car </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
@@ -291,7 +291,7 @@ font-weight: bolder;}
                         </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="seatnum"> Số ghế </label>
+        <label class="form-label form-label-top" id="label_10" for="seatnum"> Seatnum </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             <option value="{{ $rentalview->seatnum }}" >{{ $rentalview->seatnum }}</option>
@@ -319,7 +319,7 @@ font-weight: bolder;}
 
      
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="model_year"> Năm sản xuất </label>
+        <label class="form-label form-label-top" id="label_10" for="model_year"> Model year </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             <option value="{{ $rentalview->model_year }}" >{{ $rentalview->model_year }}</option>
@@ -390,7 +390,7 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="auto"> Truyền động </label>
+        <label class="form-label form-label-top" id="label_10" for="auto"> Auto </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($rentalview->auto == 1)
@@ -406,7 +406,7 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="fuel"> Loại nhiên liệu </label>
+        <label class="form-label form-label-top" id="label_10" for="fuel"> Fuel </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($rentalview->fuel == 1)
@@ -422,13 +422,13 @@ font-weight: bolder;}
 
 
       <li class="form-line form-line-column form-col-8" data-type="control_textbox" id="id_12">
-        <label class="form-label form-label-top" id="label_12" for="consumption"> Mức tiêu thụ </label>
+        <label class="form-label form-label-top" id="label_12" for="consumption"> Consumption </label>
         <div id="cid_12" class="form-input-wide">
-          <input type="text" id="input_12" name="consumption" readonly value="{{ $rentalview->consumption }}" placeholder="Số lít nhiên liệu cho quãng đường 100km." data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_12" />
+          <input type="text" id="input_12" name="consumption" readonly value="{{ $rentalview->consumption }}" placeholder="Số lít nhiên liệu cho quãng đường 100km." data-type="input-textbox" class="form-textbox" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_12" /> l/100km
         </div>
       </li>
       <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
-        <label class="form-label form-label-top" id="label_13" for="rent_price"> Đơn giá thuê mặc định </label>
+        <label class="form-label form-label-top" id="label_13" for="rent_price"> List price once day </label>
         <span style="opacity: 0.6;">Đơn giá áp dụng cho tất cả các ngày. Bạn có thuể tuỳ chỉnh giá khác cho các ngày đặc biệt (cuối tuần, lễ, tết...) trong mục quản lý xe sau khi đăng kí.</span>
       </br>
     </br>
@@ -444,7 +444,7 @@ font-weight: bolder;}
     
 
       <li class="form-line" data-type="control_textarea" id="id_36">
-        <label class="form-label form-label-top" id="label_36" for="description">Mô tả</label>
+        <label class="form-label form-label-top" id="label_36" for="description">Description</label>
         <div id="cid_36" class="form-input-wide">
           <textarea class="form-control ckeditor" rows="4" id="description" name="description" disabled cols="40" rows="6">{{ $rentalview->description }}</textarea>
         </div>
@@ -469,7 +469,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line" data-type="control_checkbox" id="id_26">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Tính năng </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Feature </label>
         </li>
 
         <div class="row">
@@ -486,7 +486,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" disabled aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="convertible" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Cửa sổ trời </label>
+                <label id="label_input_26_0" for="input_26_0"> Convertible </label>
               </span>
             </div>
           </div>
@@ -526,7 +526,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" disabled class="form-checkbox" id="input_26_0" name="gps" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Định vị GPS </label>
+                <label id="label_input_26_0" for="input_26_0"> GPS </label>
               </span>
             </div>
           </div>
@@ -542,7 +542,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" disabled class="form-checkbox" id="input_26_0" name="usb" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Khe cắm USB </label>
+                <label id="label_input_26_0" for="input_26_0"> USB </label>
               </span>
             </div>
           </div>
@@ -565,7 +565,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" disabled class="form-checkbox" id="input_26_0" name="kid_chair" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Ghế trẻ em </label>
+                <label id="label_input_26_0" for="input_26_0"> Kid chair </label>
               </span>
             </div>
           </div>
@@ -581,7 +581,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" disabled class="form-checkbox" id="input_26_0" name="map" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Bản đồ </label>
+                <label id="label_input_26_0" for="input_26_0"> Map </label>
               </span>
             </div>
           </div>
@@ -602,7 +602,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" disabled class="form-checkbox" id="input_26_0" name="camera" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Camera lùi </label>
+                <label id="label_input_26_0" for="input_26_0"> Behind camera </label>
               </span>
             </div>
           </div>
@@ -642,11 +642,11 @@ font-weight: bolder;}
 
       </ul>
         <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Địa chỉ xe </label>
+          <label class="form-label form-label-top" id="label_24" for="input_24"> Address </label>
           </li>
 
         <li class="form-line form-line-column form-col-3" data-type="control_textbox" id="id_7">
-          <label class="form-label form-label-top" id="label_7" for="address"> Địa chỉ mặc định giao nhận xe </label>
+          <label class="form-label form-label-top" id="label_7" for="address"> Default address for deliver and receive </label>
           <span style="opacity: 0.6;">Lưu ý điền đầy đủ thông tin địa chỉ để khách hàng giao nhận xe.</span>
           <div id="cid_7" class="form-input-wide">
             <input type="text" id="label_7" name="address" disabled value="{{ $rentalview->address }}" data-type="input-textbox" class="form-textbox" size="20"/>
@@ -656,11 +656,11 @@ font-weight: bolder;}
       
       <ul class="form-section">  
       <li class="form-line" data-type="control_checkbox" id="id_26">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Giao xe tận nơi </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Shipping car </label>
         </li>
         
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="max_ship_distance"> Quãng đường giao xe tối đa </label>
+          <label class="form-label form-label-top" id="label_5" for="max_ship_distance"> Distance shipping </label>
           <div id="cid_5" class="form-input-wide">
             <input type="range" name="max_ship_distance" id="range_weight3" disabled style="width: 200px" value="{{ $rentalview->max_ship_distance }}" min="5" max="50" oninput="range_weight_disp3.value = range_weight3.value">
             <output  id="range_weight_disp3">{{ $rentalview->max_ship_distance }}</output> km
@@ -668,7 +668,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="shipping_price_km"> Phí giao nhận xe cho mỗi km </label>
+          <label class="form-label form-label-top" id="label_6" for="shipping_price_km"> Shipping price/km </label>
           <div id="cid_6" class="form-input-wide">
             <input type="range" name="shipping_price_km" id="range_weight4" disabled style="width: 200px" value="{{ $rentalview->shipping_price_km }}" min="1" max="20" oninput="range_weight_disp4.value = range_weight4.value">
             <output  id="range_weight_disp4">{{ $rentalview->shipping_price_km }}</output> K
@@ -676,7 +676,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="free_ship_distance"> Miễn phí giao nhận xe trong vòng </label>
+          <label class="form-label form-label-top" id="label_6" for="free_ship_distance"> Freeship distance </label>
           <div id="cid_6" class="form-input-wide">
             <input type="range" name="free_ship_distance" id="range_weight5" disabled style="width: 200px" value="{{ $rentalview->free_ship_distance }}" min="0" max="50" oninput="range_weight_disp5.value = range_weight5.value">
             <output  id="range_weight_disp5">{{ $rentalview->free_ship_distance }}</output> km
@@ -687,11 +687,11 @@ font-weight: bolder;}
 
       <ul class="form-section">  
         <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Giới hạn số km </label>
+          <label class="form-label form-label-top" id="label_24" for="input_24"> Distance limit </label>
           </li>
           
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-            <label class="form-label form-label-top" id="label_5" for="max_travel_distance"> Số km tối đa trong 1 ngày </label>
+            <label class="form-label form-label-top" id="label_5" for="max_travel_distance"> Max travel distance/day </label>
             <div id="cid_5" class="form-input-wide">
               <input type="range" name="max_travel_distance" disabled id="range_weight6" style="width: 200px" value="{{ $rentalview->max_travel_distance }}" min="300" max="500" oninput="range_weight_disp6.value = range_weight6.value">
               <output  id="range_weight_disp6">{{ $rentalview->max_travel_distance }}</output> km
@@ -699,7 +699,7 @@ font-weight: bolder;}
           </li>
   
           <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Phí vượt giới hạn (tính mỗi km) </label>
+            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
             <div id="cid_6" class="form-input-wide">
               <input type="range" name="over_max_travel_cost" id="range_weight7" disabled style="width: 200px" value="{{ $rentalview->over_max_travel_cost }}" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
               <output  id="range_weight_disp7">{{ $rentalview->over_max_travel_cost }}</output> K
@@ -711,7 +711,7 @@ font-weight: bolder;}
         </ul>
 
         <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Điều khoản thuê xe </label>
+          <label class="form-label form-label-top" id="label_24" for="input_24"> Rules</label>
           </li>
       <li class="form-line" data-type="control_textarea" style="margin-top: -20px" id="id_36">
         <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Ghi rõ các yêu cầu để khách có thể thuê xe.</label>
@@ -740,7 +740,7 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line" data-type="control_checkbox" id="id_26">
-      <label class="form-label form-label-top" id="label_24" for="input_24"> Phê Duyệt  </label>
+      <label class="form-label form-label-top" id="label_24" for="input_24"> Approval  </label>
       </li>
 
       <div class="row">
@@ -753,7 +753,7 @@ font-weight: bolder;}
               <span class="dragger-item">
               </span>
               <input type="radio"  aria-describedby="label_26" class="form-radio" id="input_26_0" name="approval" value="1"/>
-              <label id="label_input_26_0" for="input_26_0"> Đồng ý </label>
+              <label id="label_input_26_0" for="input_26_0"> Agree </label>
             </span>
           </div>
         </div>
@@ -767,7 +767,7 @@ font-weight: bolder;}
               <span class="dragger-item">
               </span>
               <input type="radio"  aria-describedby="label_26" class="form-radio" id="input_26_0" name="approval" value="2"/>
-              <label id="label_input_26_0" for="input_26_0"> Từ chối </label>
+              <label id="label_input_26_0" for="input_26_0"> Deny </label>
             </span>
           </div>
         </div>
@@ -780,7 +780,7 @@ font-weight: bolder;}
               <div style="text-align:center"  data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField" style="width: 100px">
               
                     <button  style="text-align: center" type="submit" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-                      Cập nhật
+                      Update
                       </button>
                   </div>
 

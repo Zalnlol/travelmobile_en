@@ -27,7 +27,7 @@
     <div class="container">
 <div class="row justify-content-center">
     <div class="col-md-6 text-center mb-5">
-        <h2 class="heading-section">Ảnh xe</h2>
+        <h2 class="heading-section">Image car</h2>
         <h5>Cám ơn bạn đã chọn chúng tôi</h5>
     </div>
 </div>
@@ -38,10 +38,10 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Ảnh 1</th>
-                <th scope="col">Ảnh 2</th>
-                <th scope="col">Ảnh 3</th>
-                <th scope="col">Ảnh 4</th>
+                <th scope="col">Image 1</th>
+                <th scope="col">Image 2</th>
+                <th scope="col">Image 3</th>
+                <th scope="col">Image 4</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -73,7 +73,7 @@
                           <a class="btn btn-info btn-sm"  href="{{ route('rental.image.update', $data->car_id) }}" style="margin-top: 40px; margin-right: 10px">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Sửa
+                              Update
                           </a>
               
                       </td>

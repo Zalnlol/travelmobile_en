@@ -321,7 +321,7 @@
                         <div class="form-header-group  header-default">
                             <div class="header-text httal htvam">
                                 <h2 id="header_1" class="form-header" data-component="header">
-                                    <strong> Đăng ký xe </strong>
+                                    <strong> Register car </strong>
                                     <h6 style="color: red">Lưu ý không thể thay đổi những thông tin về xe</h6>
                                 </h2>
 
@@ -331,7 +331,7 @@
                     <li class="form-line" data-type="control_text" id="id_4">
                         <div id="cid_4" class="form-input-wide">
                             <div id="text_4" class="form-html" data-component="text">
-                                <h5><strong>Thông tin xe</strong></h5>
+                                <h5><strong>Car Information</strong></h5>
                             </div>
                         </div>
                     </li>
@@ -357,7 +357,7 @@
                             size="20" placeholder=" " data-component="textbox"
                             aria-labelledby="label_5" />
                         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                            <label class="form-label form-label-top" id="label_5" for="input_5"> Biển số xe </label>
+                            <label class="form-label form-label-top" id="label_5" for="input_5"> Plate id </label>
                             <div id="cid_5" class="form-input-wide">
                                 <input type="text" id="input_5" name="plate_id" data-type="input-textbox"
                                     class="form-textbox" size="20" value="" placeholder=" " data-component="textbox"
@@ -374,7 +374,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Hãng xe </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Brand car </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_6" name="brand" onchange="return check()"
                                     style="width:150px" data-component="dropdown">
@@ -390,7 +390,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Mẫu xe </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model car </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
@@ -400,7 +400,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Số ghế </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Seatnum </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_10" name="seatnum" style="width:150px"
                                     data-component="dropdown">
@@ -426,7 +426,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="model_year"> Năm sản xuất </label>
+                            <label class="form-label form-label-top" id="label_32" for="model_year"> Model year </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_11" name="model_year" style="width:150px"
                                     data-component="dropdown">
@@ -497,7 +497,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Truyền động </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Auto </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_14" name="auto" style="width:150px"
                                     data-component="dropdown">
@@ -508,7 +508,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Nhiên liệu </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Fuel </label>
                             <div id="cid_32" class="form-input-wide">
 
                                 <select class="form-dropdown" id="input_13" name="fuel" style="width:150px"
@@ -522,7 +522,7 @@
 
 
                         <li class="form-line form-line-column form-col-8" data-type="control_textbox" id="id_12">
-                            <label class="form-label form-label-top" id="label_12" for="consumption"> Mức tiêu thụ </label>
+                            <label class="form-label form-label-top" id="label_12" for="consumption"> Consumption </label>
                             <span style="opacity: 0.6;">
                                 Số lít nhiên liệu cho quãng đường 100km(Mức tiêu thụ thấp nhất là 5 và tối đa là 30).
                             </span>
@@ -534,7 +534,7 @@
                             </div>
                         </li>
                         <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
-                            <label class="form-label form-label-top" id="label_13" for="rent_price"> Đơn giá thuê mặc định
+                            <label class="form-label form-label-top" id="label_13" for="rent_price"> List price
                             </label>
                             <span style="opacity: 0.6;">Đơn giá áp dụng cho tất cả các ngày. Bạn có thuể tuỳ chỉnh giá khác
                                 cho các ngày đặc biệt (cuối tuần, lễ, tết...) trong mục quản lý xe sau khi đăng kí.</span>
@@ -558,7 +558,7 @@
 
 
                         <li class="form-line" data-type="control_textarea" id="id_36">
-                            <label class="form-label form-label-top" id="label_36" for="description">Mô tả</label>
+                            <label class="form-label form-label-top" id="label_36" for="description">Description</label>
                             <div id="cid_36" class="form-input-wide">
                                 <textarea class="form-control ckeditor" rows="4" id="description" name="description"
                                     placeholder="" cols="40"
@@ -591,7 +591,7 @@
                     </li>
 
                     <li class="form-line" data-type="control_checkbox" id="id_26">
-                        <label class="form-label form-label-top" id="label_24" for="input_24"> Tính năng </label>
+                        <label class="form-label form-label-top" id="label_24" for="input_24"> Feature </label>
                     </li>
 
                     <div class="row">
@@ -606,7 +606,7 @@
                                             </span>
                                             <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                                 id="input_26_0" name="convertible" value="1" />
-                                            <label id="label_input_26_0" for="input_26_0"> Cửa sổ trời </label>
+                                            <label id="label_input_26_0" for="input_26_0"> Convertible </label>
                                         </span>
                                     </div>
                                 </div>
@@ -642,7 +642,7 @@
                                         </span>
                                         <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                             id="input_26_0" name="gps" value="1" />
-                                        <label id="label_input_26_0" for="input_26_0"> Định vị GPS </label>
+                                        <label id="label_input_26_0" for="input_26_0"> GPS </label>
                                     </span>
                                 </div>
                             </div>
@@ -656,7 +656,7 @@
                                         </span>
                                         <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                             id="input_26_0" name="usb" value="1" />
-                                        <label id="label_input_26_0" for="input_26_0"> Khe cắm USB </label>
+                                        <label id="label_input_26_0" for="input_26_0"> USB </label>
                                     </span>
                                 </div>
                             </div>
@@ -677,7 +677,7 @@
                                         </span>
                                         <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                             id="input_26_0" name="kid_chair" value="1" />
-                                        <label id="label_input_26_0" for="input_26_0"> Ghế trẻ em </label>
+                                        <label id="label_input_26_0" for="input_26_0"> Kid chair </label>
                                     </span>
                                 </div>
                             </div>
@@ -691,7 +691,7 @@
                                         </span>
                                         <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                             id="input_26_0" name="map" value="1" />
-                                        <label id="label_input_26_0" for="input_26_0"> Bản đồ </label>
+                                        <label id="label_input_26_0" for="input_26_0"> Map </label>
                                     </span>
                                 </div>
                             </div>
@@ -710,7 +710,7 @@
                                         </span>
                                         <input type="checkbox" aria-describedby="label_26" class="form-checkbox"
                                             id="input_26_0" name="camera" value="1" />
-                                        <label id="label_input_26_0" for="input_26_0"> Camera lùi </label>
+                                        <label id="label_input_26_0" for="input_26_0"> Behind camera </label>
                                     </span>
                                 </div>
                             </div>
@@ -756,11 +756,11 @@
                 </ul> --}}
 
                 <li class="form-line" data-type="control_checkbox" id="id_26">
-                    <label class="form-label form-label-top" id="label_24" for="input_24"> Địa chỉ xe </label>
+                    <label class="form-label form-label-top" id="label_24" for="input_24"> Address </label>
                 </li>
 
                 <li class="form-line form-line-column form-col-3" data-type="control_textbox" id="id_7">
-                    <label class="form-label form-label-top" id="label_7" for="address"> Địa chỉ mặc định giao nhận xe
+                    <label class="form-label form-label-top" id="label_7" for="address"> Default address for deliver and receive
                     </label>
                     <span style="opacity: 0.6;">Lưu ý điền đầy đủ thông tin địa chỉ để khách hàng giao nhận xe.</span>
                     <div id="cid_7" class="form-input-wide">
@@ -789,11 +789,11 @@
                     </li>
 
                     <li class="form-line" data-type="control_checkbox" id="id_26">
-                        <label class="form-label form-label-top" id="label_24" for="input_24"> Giao xe tận nơi </label>
+                        <label class="form-label form-label-top" id="label_24" for="input_24"> Shipping car </label>
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Quãng đường giao xe tối đa
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Distance shipping
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_ship_distance" id="range_weight3" style="width: 200px" value="25"
@@ -802,8 +802,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Phí giao nhận xe cho
-                            mỗi km </label>
+                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Shipping price/km </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="shipping_price_km" id="range_weight4" style="width: 200px" value="10"
                                 min="1" max="20" oninput="range_weight_disp4.value = range_weight4.value">
@@ -812,8 +811,8 @@
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Miễn phí giao nhận
-                            xe trong vòng </label>
+                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Freeship distance
+                             </label>
                         <div id="cid_7" class="form-input-wide">
                             <input type="range" name="free_ship_distance" id="range_weight5" style="width: 200px" value="25"
                                 min="0" max="50" oninput="range_weight_disp5.value = range_weight5.value">
@@ -828,11 +827,11 @@
 
 
                     <li class="form-line" data-type="control_checkbox" id="id_26">
-                        <label class="form-label form-label-top" id="label_24" for="input_24"> Giới hạn số km </label>
+                        <label class="form-label form-label-top" id="label_24" for="input_24"> Distance limit </label>
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Số km tối đa trong 1 ngày
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Max travel distance/day
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_travel_distance" id="range_weight6" style="width: 200px"
@@ -841,8 +840,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Phí vượt giới hạn
-                            (tính mỗi km) </label>
+                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="over_max_travel_cost" id="range_weight7" style="width: 200px"
                                 value="3" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
@@ -853,7 +851,7 @@
                 </ul>
 
                 <li class="form-line" data-type="control_checkbox" id="id_26">
-                    <label class="form-label form-label-top" id="label_24" for="input_24"> Điều khoản thuê xe </label>
+                    <label class="form-label form-label-top" id="label_24" for="input_24"> Rules </label>
                 </li>
                 <li class="form-line" data-type="control_textarea" style="margin-top: -20px" id="id_36">
                     <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Ghi rõ các yêu
@@ -875,7 +873,7 @@
                             class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
                             <input style="text-align: center" type="button" onclick="return checksubmit()"
                                 class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField"
-                                data-component="button" data-content="" value="Đăng ký">
+                                data-component="button" data-content="" value="Register">
                             <button type="submit" hidden id="nutsubmit1">Đăng ký</button>
                         </div>
 

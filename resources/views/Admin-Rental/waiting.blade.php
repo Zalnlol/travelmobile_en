@@ -6,12 +6,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Danh sách xe đã đăng ký</h1>
+          <h1>Waiting Approval Car List</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-            <li class="breadcrumb-item active">Danh sách xe chờ duyệt</li>
+            <li class="breadcrumb-item active">Waiting Approval Car</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Danh sách xe chờ duyệt</h3>
+        <h3 class="card-title">Waiting Approval Car</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,11 +40,11 @@
             <thead>
                 <tr>
                     <th style="width: 1%">#</th>
-                    <th>Trạng thái xe</th>
-                    <th>Biển số</th>
-                    <th>Hãng xe</th>
-                    <th>Mẫu xe</th>
-                    <th>Ngày đăng ký</th>
+                    <th>Status</th>
+                    <th>Plate id</th>
+                    <th>Brand car</th>
+                    <th>Model car</th>
+                    <th>Join date</th>
                     <th></th>
                 </tr>
             </thead>
@@ -59,7 +59,7 @@
                     <td>
 
                       @if ($item->status == 1)
-                      <span class="badge badge-success">Đang chờ duyệt</span>
+                      <span class="badge badge-success">Waiting Approval</span>
                       @endif
 
                     </td>
@@ -71,17 +71,17 @@
                         <a class="btn btn-primary btn-sm" href="{{ route('admin.rental.view', $item->car_id) }}">
                             <i class="fas fa-folder">
                             </i>
-                            Xem
+                            View
                         </a>
                         <a class="btn btn-info btn-sm" href="{{ route('admin.rental.image', $item->car_id) }}">
                           <i class="fas fa-pencil-alt">
                           </i>
-                          Xem ảnh
+                          Image car
                       </a>
                         <a class="btn btn-danger btn-sm" href="{{ route('admin.rental.delete', $item->car_id) }}" onclick="javascript:return confirm('Are you sure ?')">
                             <i class="fas fa-trash">
                             </i>
-                            Xóa
+                            Delete
                         </a>
                     </td>
                 </tr>

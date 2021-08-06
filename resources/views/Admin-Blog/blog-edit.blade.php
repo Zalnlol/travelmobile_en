@@ -22,7 +22,7 @@
                                         value="{{ $blog->blog_id }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="txt-name">Tiêu đề</label>
+                                    <label for="txt-name">Title</label>
                                     {{-- <input type="text" class="form-control" id="title" name="title"
                                         placeholder="Nhập tiêu đề" required value="{{ $blog->title }}"> --}}
                                     <textarea class="form-control" rows="3" id="description" name="title" required
@@ -31,7 +31,7 @@
 
 
                                 <div class="form-group">
-                                    <label for="txt-price">Nội dung</label>
+                                    <label for="txt-price">Content</label>
                                     {{-- <input type="text" class="form-control ckeditor" id="content" name="content"
                                         placeholder="Nhập nội dung" required value="{{ $blog->content }}"> --}}
                                     <textarea class="form-control ckeditor" id="description" name="content" required cols="70"
@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="">Chọn ảnh</label>
+                                    <label for="">Image</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="file1" name="blog_pic"
