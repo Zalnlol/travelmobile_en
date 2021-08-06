@@ -283,7 +283,7 @@
 
                 {{-- Đánh giá --}}
                 <div class="row">
-                    <div class="col" style="font-weight:bold; font-size:15pt">RATE</div>
+                    <div class="col" style="font-weight:bold; font-size:15pt">Review</div>
 
                 </div>
 
