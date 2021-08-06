@@ -62,7 +62,7 @@
 
                             }
                         </script>
-                        <span>Có {{ $trip_number }} chuyến</span>
+                        <span> {{ $trip_number }} Trips</span>
                     </div>
 
                 </div>
@@ -71,12 +71,12 @@
                     <div class="col">
 
                         @if ($carlist['auto'] == 1)
-                            <span id="card-tag">Số tự động</span>
+                            <span id="card-tag">Automatic Transmission Car</span>
                         @else
-                            <span id="card-tag">Số sàn</span>
+                            <span id="card-tag">Manual Transmission Car</span>
 
                         @endif
-                        <span id="card-tag">Giao xe tận nơi</span>
+                        <span id="card-tag">Car delivery to the place</span>
                     </div>
                 </div>
                 <div class="row" style="padding:5%">
@@ -84,22 +84,22 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left"> ĐẶC DIỂM</span>
+                        <span id="title-left"> CHARACTERISICS</span>
 
                     </div>
                     <div class="col-sm-9">
                         <div class="row">
                             <div class="col-sm-5">
                                 <img src="{{ url('images/icon-chair.png') }}" class="icon">
-                                <span id="text-icon"> Số ghế: {{ $carlist['seatnum'] }}</span>
+                                <span id="text-icon"> Seat: {{ $carlist['seatnum'] }}</span>
                             </div>
                             <div class="col-sm-7">
                                 <img src="{{ url('images/icon-trans.png') }}" style="width: 45px">
-                                <span id="text-icon"> Truyền động:
+                                <span id="text-icon"> Transmission:
                                     @if ($carlist['auto'] == 1)
-                                        Số tự động
+                                    Automatic Transmission Car
                                     @else
-                                        Số sàn
+                                    Manual Transmission Car
                                     @endif
 
                                 </span>
@@ -120,17 +120,17 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <img src="{{ url('images/icon-diesel.png') }}" style="width: 30px">
-                                <span id="text-icon">Nhiên liệu:
+                                <span id="text-icon">Fuel:
                                     @if ($carlist['fuel'] == 1)
-                                        Xăng
+                                         Gasoline
                                     @else
-                                        Dầu diesel
+                                        Diesel
                                     @endif
                                 </span>
                             </div>
                             <div class="col-sm-7">
                                 <img src="{{ url('images/fuel.png') }}" class="icon">
-                                <span id="text-icon">Mức nhiên liệu tiêu thụ {{$carlist['consumption']}} lit/100km
+                                <span id="text-icon">Fuel consumption level {{$carlist['consumption']}}L/100km
                                    
                                 </span>
                             </div>
@@ -145,7 +145,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left"> MÔ TẢ</span>
+                        <span id="title-left"> DESCRIPTION</span>
                     </div>
 
                     <div class="col-sm-9" id="mota">
@@ -157,7 +157,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left">TÍNH NĂNG</span>
+                        <span id="title-left">FEATURE</span>
 
                     </div>
                     <div class="col">
@@ -174,7 +174,7 @@
                             @if ($carlist['usb'] == 1)
                                 <div class="col-sm-6">
                                     <i class="fa fa-usb" style="font-size: 17pt"></i>
-                                    <span id="text-icon"> Khe cắm USB</span>
+                                    <span id="text-icon"> USB Slot</span>
                                 </div>
                             @endif
 
@@ -182,7 +182,7 @@
                                 <div class="col-sm-6" style="margin-top:3%">
                                     <img class="img-ico" src="{{ url('images/reverse_camera.png') }}"
                                         style="width: 20px; height: 20px; margin-right: 10px;">
-                                    <span id="text-icon"> Camera lùi</span>
+                                    <span id="text-icon"> Reverse Camera</span>
                                 </div>
                             @endif
 
@@ -197,14 +197,14 @@
                             @if ($carlist['convertible'] == 1)
                                 <div class="col-sm-6" style="margin-top:3%">
                                     <img src="{{ url('images/convertible.png') }}" class="icon">
-                                    <span id="text-icon"> Cửa sổ trời</span>
+                                    <span id="text-icon"> Sunroof</span>
                                 </div>
                             @endif
 
                             @if ($carlist['kid_chair'] == 1)
                             <div class="col-sm-6" style="margin-top:3%">
                                 <img src="{{ url('images/icon-chair.png') }}" class="icon">
-                                <span id="text-icon"> Ghế trẻ em</span>
+                                <span id="text-icon"> Kids Seat</span>
                             </div>
                         @endif
                             
@@ -217,7 +217,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left"> GIẤY TỜ THUÊ XE (BẢN GỐC)</span>
+                        <span id="title-left"> CAR RENTAL DOCUMENTS (Original)</span>
 
                     </div>
                     <div class="col-sm-9">
