@@ -322,7 +322,7 @@
                             <div class="header-text httal htvam">
                                 <h2 id="header_1" class="form-header" data-component="header">
                                     <strong> Register car </strong>
-                                    <h6 style="color: red">Once registered, vehicle basic info can not be change except for rental price & address</h6>
+                                    <h6 style="color: red">Once registered, vehicle basic info can not be change except for rental price, distance & address</h6>
                                 </h2>
 
                             </div>
@@ -374,7 +374,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Brand car </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Brand </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_6" name="brand" onchange="return check()"
                                     style="width:150px" data-component="dropdown">
@@ -390,7 +390,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model car </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
@@ -400,7 +400,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Seatnum </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Seat number </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_10" name="seatnum" style="width:150px"
                                     data-component="dropdown">
@@ -497,7 +497,7 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Auto </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Transmission </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_14" name="auto" style="width:150px"
                                     data-component="dropdown">
@@ -769,7 +769,7 @@
                             placeholder="Input city, address .. ex. Ho Chi Minh">
                         <datalist id="geoname">
                             <option>
-                                Use my current location.
+                                Use my current location
                             </option>
                         </datalist>
 
@@ -790,11 +790,11 @@
                     </li>
 
                     <li class="form-line" data-type="control_checkbox" id="id_26">
-                        <label class="form-label form-label-top" id="label_24" for="input_24"> Shipping car </label>
+                        <label class="form-label form-label-top" id="label_24" for="input_24"> Deliver car </label>
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Distance shipping
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Maximum Distance deliver
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_ship_distance" id="range_weight3" style="width: 200px" value="25"
@@ -803,7 +803,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Shipping price/km </label>
+                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Delivery rate/km </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="shipping_price_km" id="range_weight4" style="width: 200px" value="10"
                                 min="1" max="20" oninput="range_weight_disp4.value = range_weight4.value">
@@ -812,7 +812,7 @@
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Freeship distance
+                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Free deliver distance
                              </label>
                         <div id="cid_7" class="form-input-wide">
                             <input type="range" name="free_ship_distance" id="range_weight5" style="width: 200px" value="25"
@@ -832,7 +832,7 @@
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Max travel distance/day
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Max daily travel distance
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_travel_distance" id="range_weight6" style="width: 200px"
@@ -841,7 +841,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
+                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel distance cost(each km) </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="over_max_travel_cost" id="range_weight7" style="width: 200px"
                                 value="3" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
@@ -874,7 +874,7 @@
                             <input style="text-align: center" type="button" onclick="return checksubmit()"
                                 class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField"
                                 data-component="button" data-content="" value="Register">
-                            <button type="submit" hidden id="nutsubmit1">Đăng ký</button>
+                            <button type="submit" hidden id="nutsubmit1">Register</button>
                         </div>
 
                     </div>

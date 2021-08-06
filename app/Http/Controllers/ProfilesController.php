@@ -67,7 +67,7 @@ class ProfilesController extends Controller
         $data = request()->validate([
             'name' => ['required', 'string', 'max:255'],
             'avatar_image' => '',
-            'mobile' => ['required', 'digits_between:10,11'],
+            'mobile' => ['required', 'string', 'min:8', 'max:12'],
             'dob' => '',
             'gender' => 'required',
             'driver_id' => 'alpha_num',
