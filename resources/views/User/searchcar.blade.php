@@ -16,8 +16,8 @@
                             <div class="row">
                                 <div class="col">
                                     <span class="tile-search1">Place</span>
-                                    <input type="text" name="city" id="search_input" list="geoname"
-                                        onchange="return checktoado()" placeholder="Input city, address"
+                                    <input size="30" type="text" name="city" id="search_input" list="geoname"
+                                        onchange="return checktoado()" placeholder="Input city, address, ex.Ho Chi Minh"
                                         value="{{ $searchinfo['city'] }}">
                                     <datalist id="geoname">
                                         <option>

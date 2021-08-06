@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password-confirm">{{ __('Xác nhận mật khẩu') }}</label>
+                    <label for="password-confirm">{{ __('Confirm password') }}</label>
 
                     <div class="form-check">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -57,8 +57,8 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">{{ __('Đăng ký') }}</button>
-                    <button formaction="/" id="button" class="btn btn-primary deep-purple btn-block ">Hủy</button>
+                    <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">{{ __('Register') }}</button>
+                    <button formaction="/" id="button" class="btn btn-primary deep-purple btn-block ">{{ __('Cancel') }}</button>
                 </div>
                 <br>
                 <div class="text-center">

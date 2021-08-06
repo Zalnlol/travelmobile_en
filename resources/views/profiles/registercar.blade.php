@@ -322,7 +322,7 @@
                             <div class="header-text httal htvam">
                                 <h2 id="header_1" class="form-header" data-component="header">
                                     <strong> Register car </strong>
-                                    <h6 style="color: red">Lưu ý không thể thay đổi những thông tin về xe</h6>
+                                    <h6 style="color: red">Once registered, vehicle basic info can not be change except for rental price & address</h6>
                                 </h2>
 
                             </div>
@@ -379,7 +379,7 @@
                                 <select class="form-dropdown" id="input_6" name="brand" onchange="return check()"
                                     style="width:150px" data-component="dropdown">
 
-                                    <option value="0">Vui lòng chọn hãng xe</option>
+                                    <option value="0">Choose a brand</option>
                                     @foreach ($hangxe as $element)
                                         <option value="{{ $element['mfg_id'] }}">{{ $element['name'] }}</option>
                                     @endforeach
@@ -394,7 +394,7 @@
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
-                                    <option value="">Vui lòng chọn xe</option>
+                                    <option value="">Choose a model</option>
                                 </select>
                             </div>
                         </li>
@@ -501,8 +501,8 @@
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_14" name="auto" style="width:150px"
                                     data-component="dropdown">
-                                    <option value="1"> Số tự động </option>
-                                    <option value="2"> Số sàn </option>
+                                    <option value="1"> Automatic </option>
+                                    <option value="2"> Manual </option>
                                 </select>
                             </div>
                         </li>
@@ -513,8 +513,8 @@
 
                                 <select class="form-dropdown" id="input_13" name="fuel" style="width:150px"
                                     data-component="dropdown">
-                                    <option value="1"> Xăng </option>
-                                    <option value="2"> Dầu diesel </option>
+                                    <option value="1"> Petrol </option>
+                                    <option value="2"> Diesel </option>
 
                                 </select>
                             </div>
@@ -524,30 +524,31 @@
                         <li class="form-line form-line-column form-col-8" data-type="control_textbox" id="id_12">
                             <label class="form-label form-label-top" id="label_12" for="consumption"> Consumption </label>
                             <span style="opacity: 0.6;">
-                                Số lít nhiên liệu cho quãng đường 100km(Mức tiêu thụ thấp nhất là 5 và tối đa là 30).
+                                Number of litres per 100km (minimum 5 and maximum 30)
                             </span>
                             <div id="cid_12" class="form-input-wide">
                                 <input type="text" id="input_12" name="consumption"
                                     placeholder="" data-type="input-textbox"
                                     class="form-textbox" size="20" value="" placeholder=" " data-component="textbox"
-                                    aria-labelledby="label_12" /> lít
+                                    aria-labelledby="label_12" /> litres
                             </div>
                         </li>
                         <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
                             <label class="form-label form-label-top" id="label_13" for="rent_price"> List price
                             </label>
-                            <span style="opacity: 0.6;">Đơn giá áp dụng cho tất cả các ngày. Bạn có thuể tuỳ chỉnh giá khác
-                                cho các ngày đặc biệt (cuối tuần, lễ, tết...) trong mục quản lý xe sau khi đăng kí.</span>
-                            </br>
-                        </br>
-                            <span>
-                                Mức giá thấp nhất là 400K và cao nhất là 15000K.
+                            <span style="opacity: 0.6;">
+                                Daily rate applied. You may adjust price for other occasions (weekends, holidays) in 'my car profile' after registered.
                             </span>
-                            </br>
+                            <br>
+                        <br>
+                            <span>
+                                Minimum price of 400k and maximum at 15000k
+                            </span>
+                            <br>
 
-                            <span style="opacity: 0.6">Giá đề xuất: <span id="giadexuat">500</span> K/ngày</span>
-                            </br>
-                            </br>
+                            <span style="opacity: 0.6">Suggested price: <span id="giadexuat">500</span> K/day</span>
+                            <br>
+                            <br>
                             <div id="cid_13" class="form-input-wide">
                                 <input type="text" id="rent_price" name="rent_price" data-type="input-textbox"
                                     class="form-textbox" size="20" value="" placeholder=" " data-component="textbox"
@@ -562,8 +563,8 @@
                             <div id="cid_36" class="form-input-wide">
                                 <textarea class="form-control ckeditor" rows="4" id="description" name="description"
                                     placeholder="" cols="40"
-                                    rows="6">Huyndai Elantra số tự động đăng kí tháng 06/2018. Xe gia đình mới đẹp, nội thất nguyên bản, sạch sẽ, bảo dưỡng thường xuyên, rửa xe miễn phí cho khách.
-                                      Xe rộng rãi, an toàn, tiện nghi, phù hợp cho gia đình du lịch. Xe trang bị hệ thống cảm biến lùi, gạt mưa tự động, đèn pha tự động, camera hành trình, hệ thống giải trí AV cùng nhiều tiện nghi khác...</textarea>
+                                    rows="6">Hyundai Elantra automatic number registered in June 2018. Beautiful new family car, original interior, clean, regular maintenance, free car wash for guests. 
+                                    The car is spacious, safe, comfortable, suitable for family travel. Vehicles equipped with reverse sensor system, automatic wipers, automatic headlights, dashcam, AV entertainment system and many other amenities...</textarea>
                             </div>
                         </li>
 
@@ -762,13 +763,13 @@
                 <li class="form-line form-line-column form-col-3" data-type="control_textbox" id="id_7">
                     <label class="form-label form-label-top" id="label_7" for="address"> Default address for deliver and receive
                     </label>
-                    <span style="opacity: 0.6;">Lưu ý điền đầy đủ thông tin địa chỉ để khách hàng giao nhận xe.</span>
+                    <span style="opacity: 0.6;">Please complete the address information for the customer to deliver the vehicle.</span>
                     <div id="cid_7" class="form-input-wide">
-                        <input type="text" name="address" id="search_input" list="geoname" onchange="return checktoado()"
-                            placeholder="Nhập thành phố, quận, địa chỉ...">
+                        <input size="50" type="text" name="address" id="search_input" list="geoname" onchange="return checktoado()"
+                            placeholder="Input city, address .. ex. Ho Chi Minh">
                         <datalist id="geoname">
                             <option>
-                                Sử dụng vị trí của bạn
+                                Use my current location.
                             </option>
                         </datalist>
 
@@ -854,8 +855,7 @@
                     <label class="form-label form-label-top" id="label_24" for="input_24"> Rules </label>
                 </li>
                 <li class="form-line" data-type="control_textarea" style="margin-top: -20px" id="id_36">
-                    <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Ghi rõ các yêu
-                        cầu để khách có thể thuê xe.</label>
+                    <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Specify the requirements for guests to rent a car.</label>
 
 
                     <div id="cid_36" class="form-input-wide">
@@ -942,14 +942,14 @@
                 }
             });
 
-            str = '<option value="0">Vui lòng chọn xe</option>';
+            str = '<option value="0">Choose a brand</option>';
             car_list.forEach(element => {
                 str += `<option value="` + element['model'] + `">` + element['model'] + `</option>`
             });
 
             if (mfg_id == '0') {
                 document.getElementById('input_7').disabled = true;
-                document.getElementById('input_7').innerHTML = `<option >Vui lòng chọn mẫu xe</option>`;
+                document.getElementById('input_7').innerHTML = `<option >Choose a model</option>`;
                 
                 
                 

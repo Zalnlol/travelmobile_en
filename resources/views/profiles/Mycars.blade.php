@@ -54,7 +54,7 @@
 						  <thead class="thead-dark">
 						    <tr>
 						      <th>Status</th>
-						      <th style="width: 15%;">Biển số</th>
+						      <th style="width: 15%;">Plate ID</th>
 						      <th>Brand car</th>
 						      <th>Model car</th>
                               <th>Join date</th>
@@ -91,7 +91,7 @@
 										<a class="btn btn-info btn-sm" href="{{ route('rental.image', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
-                                            Image car
+                                            View image
                                         </a>
                                         <a class="btn btn-info btn-sm" href="{{ route('rental.update', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">

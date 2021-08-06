@@ -65,7 +65,7 @@
                                     <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/profile') }}">My account</a>
                                     <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mycars')}}">My cars</a>
                                     <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/mytrips')}}">My trips</a>
-                                    <a class="dropdown-item" id="dropdown-list" href="#">Change password</a>
+                                    <a class="dropdown-item" id="dropdown-list" href="{{ url('/user/change-password')}}">Change password</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
