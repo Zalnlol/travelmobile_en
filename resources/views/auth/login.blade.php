@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Đăng nhập')
+@section('title', 'Login')
 @section('content')
 <body id="body">
     <div id="login-card" class="card">
@@ -10,7 +10,7 @@
                 @csrf
                 <div class="form-group">
                     <div class="form-check">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Nhập email" required autofocus>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Enter email" required autofocus>
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     <div class="form-check">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Password" required autocomplete="current-password">
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                 <br>
 
                 <div id="btn" class="text-center">
-                    Hoặc đăng nhập bằng tài khoản
+                    Or log in with your account
                     <a href="{{url('auth/facebook')}}">
                         <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-facebook"></i></button>
                     </a>

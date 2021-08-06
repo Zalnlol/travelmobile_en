@@ -11,30 +11,31 @@
         <div class="row" style="box-shadow: 0px 0px 20px rgb(233, 227, 227); height:auto">
 
             <div class="col-sm-3" style="text-align: right ; ">
-                <a href="{{url('/user/mycars')}}">
-                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">My cars</span>
+                <a href="{{ url('/user/mycars') }}">
+                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Cars List</span>
                 </a>
             </div>
 
 
 
             <div class="col-sm-2" style="text-align: left; margin-left:5% ">
-                <a href="{{url('/user/mycars/triplist')}}">
-                    <span id="title-nav2" >Trip list</span>
+                <a href="{{ url('/user/mycars/triplist') }}">
+                    <span id="title-nav2" >Trips List</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/register') }}">
-                    <span id="title-nav2">Register car</span>
+                    <span id="title-nav2">Car registration</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/history') }}">
-                    <span id="title-nav2">History for rental</span>
+                    <span id="title-nav2" >Rental history</span>
                 </a>
             </div>
+
 
         </div>
 
@@ -43,7 +44,7 @@
 
             <div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">My cars</h2>
+					<h2 class="heading-section"></h2>
 				</div>
 			</div>
 			<div class="row">
@@ -90,7 +91,7 @@
 										<a class="btn btn-info btn-sm" href="{{ route('rental.image', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
-                                            Image car
+                                            View image
                                         </a>
                                         <a class="btn btn-info btn-sm" href="{{ route('rental.update', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">

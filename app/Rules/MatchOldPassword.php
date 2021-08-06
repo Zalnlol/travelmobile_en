@@ -37,6 +37,6 @@ class MatchOldPassword implements Rule
      */
     public function message()
     {
-        return 'Mật khẩu không đúng, vui lòng nhập lại.';
+        return 'Incorrect password, please try again!';
     }
 }

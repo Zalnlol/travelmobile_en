@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Đăng ký')
+@section('title', 'Register')
 @section('content')
 <body id="body">
     <div class="card" id="login-card">
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password-confirm">{{ __('Xác nhận mật khẩu') }}</label>
+                    <label for="password-confirm">{{ __('Confirm password') }}</label>
 
                     <div class="form-check">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -57,17 +57,17 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">{{ __('Đăng ký') }}</button>
-                    <button formaction="/" id="button" class="btn btn-primary deep-purple btn-block ">Hủy</button>
+                    <button type="submit" id="button" class="btn btn-primary deep-purple btn-block">{{ __('Register') }}</button>
+                    <button formaction="/" id="button" class="btn btn-primary deep-purple btn-block ">{{ __('Cancel') }}</button>
                 </div>
                 <br>
                 <div class="text-center">
-                    <a href="login"><b>Tôi là thành viên</b></a>
+                    <a href="login"><b>I'm a member</b></a>
                 </div>
                 <hr>
                 <br>
                 <div id="btn" class="text-center">
-                    <b>Hoặc đăng nhập bằng tài khoản</b>
+                    <b>Or log in with your account</b>
                     <a href="{{url('auth/facebook')}}">
                         <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-facebook"></i></button>
                     </a>

@@ -19,7 +19,7 @@
                                         </div>
 
                                         <div class="col-sm-4" style="text-align: right">
-                                            <span id="cardPrice">{{$chiecxe->rent_price}}</span>
+                                            <span id="cardPrice">{{$chiecxe->rent_price}}K</span>
                                         </div>
                                     </div>
                                     <div class="row" style="margin-top: 3%">
@@ -41,21 +41,19 @@
                                             
                                         </div>
                                         <div class="col-sm-7">
-                                            • {{$chiecxe->trip_number}}  chuyến 
+                                            • {{$chiecxe->trip_number}}  Trips
                                         </div>
                                     </div>
                                     <br>
                         
                             
                                     @if ($chiecxe->auto==1)
-                                        <span id="card-tag">Số tự động</span>
+                                        <span id="card-tag">Automatic Transmission Car</span>
                                     @else
-                                        <span id="card-tag">Số sàn</span>
+                                        <span id="card-tag">Manual Transmission Car</span>
                                         
                                     @endif
-                                    
-
-                                    <span id="card-tag">Giao xe tận nơi</span>
+                            
                                     <br>
                                     <br>
 
@@ -81,7 +79,7 @@
         <aside class="Map-List">
             <button id="map" onclick="return mapclick()">
                 <i class="fa fa-map"></i>
-                <span style="font-weight: bold;font-size:12pt;"> Bản đồ</span> 
+                <span style="font-weight: bold;font-size:12pt;"> Map</span> 
             </button>
         </aside>
 

@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Trang cá nhân')
+@section('titleweb', 'Profile')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/userprofile.css') }}">
 @section('bodycode')
 
@@ -16,7 +16,7 @@
                     <div class="profile-info">
                         <div class="item-content">
                             <div class="item-title">
-                                <p>{{ $user->name }}</p><a class="func-edit" title="Chỉnh sửa"></a>
+                                <p>{{ $user->name }}</p><a class="func-edit" title="Edit "></a>
                             </div>
                             
                         @if ($user_id == $user->user_id)

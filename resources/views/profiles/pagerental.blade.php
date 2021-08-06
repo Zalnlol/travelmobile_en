@@ -1,10 +1,10 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Thông tin hợp đồng')
+@section('titleweb', 'Contract information')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/rental.css') }}">
 @section('bodycode')
 
     <div style="margin-top: 10%; margin-bottom:5%" class="container">
-        <h3 style="text-align: center">Thông tin chi tiết hợp đồng #{{ $data3['contract_id'] }}</h3>
+        <h3 style="text-align: center">Contract details #{{ $data3['contract_id'] }}</h3>
 
         <div class="row" style="margin-top: 2%">
 
@@ -14,32 +14,32 @@
             <div class="col-sm-6" style="text-align: left">
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Tên chủ xe:</b> {{ $data3['user_name'] }}</span>
+                        <span id="title-span"><b>Car owner's name:</b> {{ $data3['user_name'] }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Tên xe:</b> {{ $data3['car_name'] }} {{ $data3['model_year'] }}</span>
+                        <span id="title-span"><b>Car name:</b> {{ $data3['car_name'] }} {{ $data3['model_year'] }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Biển số:</b> {{ $data3['plate_id'] }}</span>
+                        <span id="title-span"><b>License plate:</b> {{ $data3['plate_id'] }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Số km tối đa trong ngày</b> {{ $data3['max_travel_distance'] }} Km</span>
+                        <span id="title-span"><b>Daily kilometer: limit maximun </b> {{ $data3['max_travel_distance'] }} Km</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Tiền khi chạy vượt:</b> {{ $data3['over_max_travel_cost'] }} đ/Km</span>
+                        <span id="title-span"><b>If over limit:</b> {{ $data3['over_max_travel_cost'] }} đ/Km</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span id="title-span"><b>Giá thuê mặc định:</b> {{ $data3['rent_price'] }}k</span>
+                        <span id="title-span"><b>Default rental price:</b> {{ $data3['rent_price'] }}k</span>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
 
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Tên khách hàng:</b></span>
+                <span id="title-span"> <b>Customer name:</b></span>
             </div>
             <div class="col-sm-6">
                 <span id="title-span" style="text-align: left">{{ $data3['customer_name'] }}</span>
@@ -61,7 +61,7 @@
         </div>
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Số điện thoại:</b></span>
+                <span id="title-span"> <b>Phone:</b></span>
             </div>
             @if (($data3['status'] != 'Chờ xác nhận')||($data3['tmp'] != '1'))
                 <div class="col-sm-6">
@@ -72,23 +72,23 @@
 
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Ngày nhận xe:</b></span>
+                <span id="title-span"> <b>Pick-up date:</b></span>
             </div>
             <div class="col-sm-6">
-                <span id="title-span" style="text-align: left">{{ $data3['pickup_date'] }} giờ</span>
+                <span id="title-span" style="text-align: left">{{ $data3['pickup_date'] }} h</span>
             </div>
         </div>
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Ngày trả xe:</b></span>
+                <span id="title-span"> <b>Return date:</b></span>
             </div>
             <div class="col-sm-6">
-                <span id="title-span" style="text-align: left">{{ $data3['return_date'] }} giờ</span>
+                <span id="title-span" style="text-align: left">{{ $data3['return_date'] }} h</span>
             </div>
         </div>
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Địa chỉ giao xe:</b></span>
+                <span id="title-span"> <b>Car delivery address:</b></span>
             </div>
             <div class="col-sm-6">
                 <span id="title-span" style="text-align: left">{{ $data3['pickup_address'] }}</span>
@@ -97,7 +97,7 @@
 
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Tiền thuê:</b></span>
+                <span id="title-span"> <b>Rental:</b></span>
             </div>
             <div class="col-sm-6">
                 <span id="title-span" style="text-align: left">{{ $data3['rental_price'] }} đ </span>
@@ -105,7 +105,7 @@
         </div>
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Phí giao xe:</b></span>
+                <span id="title-span"> <b>Delivery fee:</b></span>
             </div>
             <div class="col-sm-6">
                 <span id="title-span" style="text-align: left">{{ $data3['shipping_cost'] }}đ</span>
@@ -115,7 +115,7 @@
         @if ($data3['tmp'] != '1')
             <div class="row" style="margin-top: 2%">
                 <div class="col-sm-6" style="text-align: right">
-                    <span id="title-span"> <b>Khách đặt cọc:</b></span>
+                    <span id="title-span"> <b>Deposited:</b></span>
                 </div>
                 <div class="col-sm-6">
                     <span id="title-span" style="text-align: left">{{ $data3['customer_deposit'] }}đ</span>
@@ -124,7 +124,7 @@
         @endif
         <div class="row" style="margin-top: 2%">
             <div class="col-sm-6" style="text-align: right">
-                <span id="title-span"> <b>Phí dịch vụ:</b></span>
+                <span id="title-span"> <b>Service charge:</b></span>
             </div>
             <div class="col-sm-6">
                 <span id="title-span" style="text-align: left">{{ $data3['service_cost'] }}đ</span>
@@ -134,7 +134,7 @@
         @if ($data3['tmp'] != '2')
             <div class="row" style="margin-top: 2%">
                 <div class="col-sm-6" style="text-align: right">
-                    <span id="title-span"> <b>Tiền cọc trả lại sau khi cho thuê thành công:</b></span>
+                    <span id="title-span"> <b>Deposit returned after successful rental:</b></span>
                 </div>
                 <div class="col-sm-6">
                     <span id="title-span" style="text-align: left">{{ $data3['deposit_after_rental'] }}đ</span>
@@ -145,7 +145,7 @@
         @if ($data3['tmp'] != '2')
             <div class="row" style="margin-top: 2%">
                 <div class="col-sm-6" style="text-align: right">
-                    <span id="title-span"> <b>Tiền thu của khách:</b></span>
+                    <span id="title-span"> <b>Cash collected from customers:</b></span>
                 </div>
                 <div class="col-sm-6">
                     <span id="title-span" style="text-align: left">{{ $data3['remaining'] }}đ</span>
@@ -154,7 +154,7 @@
         @else
             <div class="row" style="margin-top: 2%">
                 <div class="col-sm-6" style="text-align: right">
-                    <span id="title-span"> <b>Tiền thanh toán sau chuyến đi:</b></span>
+                    <span id="title-span"> <b>Payment after the trip:</b></span>
                 </div>
                 <div class="col-sm-6">
                     <span id="title-span" style="text-align: left">{{ $data3['remaining'] }}đ</span>

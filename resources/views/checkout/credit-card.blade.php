@@ -7,13 +7,13 @@
     <div class="container" style="margin-top:10%;margin-bottom:10%">
         <div class="row">
             <div class="col" style="text-align: center">
-                <h3>Trang thanh toán phí</h3>
+                <h3>Fee payment page</h3>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="">
-                    <p>Số tiền cần thanh toán là ${{$amount}}</p>
+                    <p>Amount to be paid is ${{$amount}}</p>
                 </div>
                 <div class="card">
                     <form action="{{url('user/mytrip')}}" method="post" id="payment-form">
@@ -21,7 +21,7 @@
                         <div class="form-group">
                             <div class="card-header">
                                 <label for="card-element">
-                                    Vui lòng nhập thông tin thẻ Visa/Mastel Card
+                                    Please enter Visa/Mastercard information
                                 </label>
                             </div>
                             <div class="card-body">

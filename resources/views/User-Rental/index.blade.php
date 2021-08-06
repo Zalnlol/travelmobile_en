@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Xe của tôi</h2>
+					<h2 class="heading-section">My cars</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -26,11 +26,11 @@
 						<table class="table" style="text-align: center">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Trạng thái xe</th>
-						      <th style="width: 15%;">Biển số</th>
-						      <th>Hãng xe</th>
-						      <th>Mẫu xe</th>
-                              <th>Ngày đăng ký</th>
+						      <th>Vehicle status</th>
+						      <th style="width: 15%;">Plate ID</th>
+						      <th>Brand</th>
+						      <th>Model</th>
+                              <th>Register date</th>
                               <th style=""></th>
 						      <th>&nbsp;</th>
 						    </tr>
@@ -41,16 +41,16 @@
 						    <tr class="alert" role="alert">
 						      <td>
                                   @if ($item->status == 1)
-                                  <span class="badge badge-success">Đang chờ duyệt</span>
+                                  <span class="badge badge-success">Waiting for approval</span>
                                   @endif
                                   @if ($item->status == 2)
-                                  <span class="badge badge-success">Đang hoạt động</span>
+                                  <span class="badge badge-success">Active</span>
                                   @endif
 								  @if ($item->status == 3)
-                                  <span class="badge badge-danger">Đã bị từ chối</span>
+                                  <span class="badge badge-danger">Rejected</span>
                                   @endif
 								  @if ($item->status == 4)
-                                  <span class="badge badge-danger">Đang tạm ngưng</span>
+                                  <span class="badge badge-danger">Halt listing</span>
                                   @endif
                                 </td>
 						      <td>{{ $item->plate_id }}</td>
@@ -64,15 +64,15 @@
 										<a class="btn btn-info btn-sm" href="{{ route('rental.image', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
-                                            Ảnh xe
+                                            Car image
                                         </a>
                                         <a class="btn btn-info btn-sm" href="{{ route('rental.update', $item->car_id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
-                                            Sửa
+                                            Edit
                                         </a>
                                         <a class="btn btn-danger btn-sm" href="{{ route('rental.delete', $item->car_id) }}" onclick="javascript:return confirm('Bạn có chắc muốn xóa ?')">
-                                            Xóa
+                                            Delete
                                         </a>
                                     </td>
 				          		</a>

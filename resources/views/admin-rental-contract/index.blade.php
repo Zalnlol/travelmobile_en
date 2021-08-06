@@ -1,17 +1,17 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Danh sách hợp đồng')
+@section('title', 'Retal List')
 @section('content')
 
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Danh sách hợp đồng</h1>
+          <h1>Retal List</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-            <li class="breadcrumb-item active">Danh sách hợp đồng</li>
+            <li class="breadcrumb-item active">Retal List</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Danh sách hợp đồng</h3>
+        <h3 class="card-title">Retal List</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,13 +40,13 @@
             <thead>
                 <tr>
                     <th style="width: 1%">#</th>
-                    <th>Mã hợp đồng</th>
-                    <th>Tên xe</th>
-                    <th>Ngày thuê</th>
-                    <th>Ngày trả</th>
-                    <th>Giá tổng</th>
-                    <th>Phí dịch vụ</th>
-                    <th>Trạng thái</th>
+                    <th>Contract details</th>
+                    <th>TCar name</th>
+                    <th>Pick-up date</th>
+                    <th>Return date</th>
+                    <th>Total</th>
+                    <th>Service charge</th>
+                    <th>Status</th>
                     <th></th>
 
                 </tr>
@@ -78,7 +78,7 @@
                         <a class="btn btn-primary btn-sm" href="{{url('admin/rentalcontract/xemchitiet/'.$item['contract_id'])}}">
                             <i class="fas fa-folder">
                             </i>
-                            Xem chi tiết
+                            See details
                         </a>         
                     </td>
                 </tr>

@@ -1,5 +1,5 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Ảnh xe')
+@section('title', 'Image Rental Car')
 @section('content')
 
 <link rel="stylesheet" type="text/css" href="{{ asset('lightbox2-2.11.3/lightbox.min.css') }}">

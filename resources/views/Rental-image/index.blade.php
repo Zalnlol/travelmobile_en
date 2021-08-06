@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb','Ảnh xe của tôi')
+@section('titleweb','My car Image')
     
 @section('bodycode')
 <link rel="stylesheet" href="/path/to/dist/css/image-zoom.css" />

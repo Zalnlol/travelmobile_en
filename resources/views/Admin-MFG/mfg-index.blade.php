@@ -1,5 +1,5 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Danh sách hãng xe')
+@section('title', 'Home MFG')
 @section('content')
 
     <section class="content-header">

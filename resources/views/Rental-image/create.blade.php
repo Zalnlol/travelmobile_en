@@ -205,7 +205,7 @@ font-weight: bolder;}
         <div class="form-header-group  header-default">
           <div class="header-text httal htvam">
             <h2 id="header_47" class="form-header" data-component="header">
-              Image Car <h5>(Must be enough 4 image)</h5>
+              Car images <h5>(Require at least 4)</h5>
             </h2>
             <div id="subHeader_47" class="form-subHeader">
               Must be post 4 image to get information for your car.

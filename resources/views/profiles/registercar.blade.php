@@ -285,10 +285,9 @@
 @section('bodycode')
     <div style="padding: 8% 0%; ">
         <div class="row" style="box-shadow: 0px 0px 20px rgb(233, 227, 227); height:auto">
-
             <div class="col-sm-3" style="text-align: right ; ">
                 <a href="{{ url('/user/mycars') }}">
-                    <span id="title-nav2">My cars</span>
+                    <span id="title-nav2">Cars List</span>
                 </a>
             </div>
 
@@ -296,21 +295,22 @@
 
             <div class="col-sm-2" style="text-align: left; margin-left:5% ">
                 <a href="{{ url('/user/mycars/triplist') }}">
-                    <span id="title-nav2">Trip list</span>
+                    <span id="title-nav2" >Trips List</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/register') }}">
-                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Register car</span>
+                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Car registration</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/history') }}">
-                    <span id="title-nav2">History for rental</span>
+                    <span id="title-nav2" >Rental history</span>
                 </a>
             </div>
+
 
         </div>
 
@@ -374,12 +374,12 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Brand car </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Brand </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_6" name="brand" onchange="return check()"
                                     style="width:150px" data-component="dropdown">
 
-                                    <option value="0">Vui lòng chọn hãng xe</option>
+                                    <option value="0">Choose a brand</option>
                                     @foreach ($hangxe as $element)
                                         <option value="{{ $element['mfg_id'] }}">{{ $element['name'] }}</option>
                                     @endforeach
@@ -390,17 +390,17 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model car </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
-                                    <option value="">Vui lòng chọn xe</option>
+                                    <option value="">Choose a model</option>
                                 </select>
                             </div>
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Seatnum </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Seat number </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_10" name="seatnum" style="width:150px"
                                     data-component="dropdown">
@@ -497,12 +497,12 @@
                         </li>
 
                         <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Auto </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Transmission </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_14" name="auto" style="width:150px"
                                     data-component="dropdown">
-                                    <option value="1"> Số tự động </option>
-                                    <option value="2"> Số sàn </option>
+                                    <option value="1"> Automatic </option>
+                                    <option value="2"> Manual </option>
                                 </select>
                             </div>
                         </li>
@@ -513,8 +513,8 @@
 
                                 <select class="form-dropdown" id="input_13" name="fuel" style="width:150px"
                                     data-component="dropdown">
-                                    <option value="1"> Xăng </option>
-                                    <option value="2"> Dầu diesel </option>
+                                    <option value="1"> Petrol </option>
+                                    <option value="2"> Diesel </option>
 
                                 </select>
                             </div>
@@ -530,7 +530,7 @@
                                 <input type="text" id="input_12" name="consumption"
                                     placeholder="" data-type="input-textbox"
                                     class="form-textbox" size="20" value="" placeholder=" " data-component="textbox"
-                                    aria-labelledby="label_12" /> lít
+                                    aria-labelledby="label_12" /> litres
                             </div>
                         </li>
                         <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
@@ -540,9 +540,9 @@
                             </br>
                         </br>
                             <span>
-                                Min price is 400k and max is 500k.
+                                Min price is 400k and max is 1500k.
                             </span>
-                            </br>
+                            <br>
 
                             <span style="opacity: 0.6">List price: <span id="giadexuat">500</span> K/day</span>
                             </br>
@@ -561,8 +561,8 @@
                             <div id="cid_36" class="form-input-wide">
                                 <textarea class="form-control ckeditor" rows="4" id="description" name="description"
                                     placeholder="" cols="40"
-                                    rows="6">Huyndai Elantra số tự động đăng kí tháng 06/2018. Xe gia đình mới đẹp, nội thất nguyên bản, sạch sẽ, bảo dưỡng thường xuyên, rửa xe miễn phí cho khách.
-                                      Xe rộng rãi, an toàn, tiện nghi, phù hợp cho gia đình du lịch. Xe trang bị hệ thống cảm biến lùi, gạt mưa tự động, đèn pha tự động, camera hành trình, hệ thống giải trí AV cùng nhiều tiện nghi khác...</textarea>
+                                    rows="6">Hyundai Elantra automatic number registered in June 2018. Beautiful new family car, original interior, clean, regular maintenance, free car wash for guests. 
+                                    The car is spacious, safe, comfortable, suitable for family travel. Vehicles equipped with reverse sensor system, automatic wipers, automatic headlights, dashcam, AV entertainment system and many other amenities...</textarea>
                             </div>
                         </li>
 
@@ -731,8 +731,8 @@
                     </label>
                     <span style="opacity: 0.6;">Must be carefully note for deliver and receive.</span>
                     <div id="cid_7" class="form-input-wide">
-                        <input type="text" name="address" id="search_input" list="geoname" onchange="return checktoado()"
-                            placeholder="Nhập thành phố, quận, địa chỉ...">
+                        <input size="50" type="text" name="address" id="search_input" list="geoname" onchange="return checktoado()"
+                            placeholder="Input city, address .. ex. Ho Chi Minh">
                         <datalist id="geoname">
                             <option>
                                 Your location
@@ -756,11 +756,11 @@
                     </li>
 
                     <li class="form-line" data-type="control_checkbox" id="id_26">
-                        <label class="form-label form-label-top" id="label_24" for="input_24"> Shipping car </label>
+                        <label class="form-label form-label-top" id="label_24" for="input_24"> Deliver car </label>
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Distance shipping
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Maximum Distance deliver
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_ship_distance" id="range_weight3" style="width: 200px" value="25"
@@ -769,7 +769,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Shipping price/km </label>
+                        <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Delivery rate/km </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="shipping_price_km" id="range_weight4" style="width: 200px" value="10"
                                 min="1" max="20" oninput="range_weight_disp4.value = range_weight4.value">
@@ -778,7 +778,7 @@
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Freeship distance
+                        <label class="form-label form-label-top" id="label_7" for="free_ship_distance"> Free deliver distance
                              </label>
                         <div id="cid_7" class="form-input-wide">
                             <input type="range" name="free_ship_distance" id="range_weight5" style="width: 200px" value="25"
@@ -798,7 +798,7 @@
                     </li>
 
                     <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-                        <label class="form-label form-label-top" id="label_5" for="input_5"> Max travel distance/day
+                        <label class="form-label form-label-top" id="label_5" for="input_5"> Max daily travel distance
                         </label>
                         <div id="cid_5" class="form-input-wide">
                             <input type="range" name="max_travel_distance" id="range_weight6" style="width: 200px"
@@ -807,7 +807,7 @@
                         </div>
                     </li>
                     <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
+                        <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel distance cost(each km) </label>
                         <div id="cid_6" class="form-input-wide">
                             <input type="range" name="over_max_travel_cost" id="range_weight7" style="width: 200px"
                                 value="3" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
@@ -840,7 +840,7 @@
                             <input style="text-align: center" type="button" onclick="return checksubmit()"
                                 class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField"
                                 data-component="button" data-content="" value="Register">
-                            <button type="submit" hidden id="nutsubmit1">Đăng ký</button>
+                            <button type="submit" hidden id="nutsubmit1">Register</button>
                         </div>
 
                     </div>
@@ -908,14 +908,14 @@
                 }
             });
 
-            str = '<option value="0">Vui lòng chọn xe</option>';
+            str = '<option value="0">Choose a brand</option>';
             car_list.forEach(element => {
                 str += `<option value="` + element['model'] + `">` + element['model'] + `</option>`
             });
 
             if (mfg_id == '0') {
                 document.getElementById('input_7').disabled = true;
-                document.getElementById('input_7').innerHTML = `<option >Vui lòng chọn mẫu xe</option>`;
+                document.getElementById('input_7').innerHTML = `<option >Choose a model</option>`;
                 
                 
                 

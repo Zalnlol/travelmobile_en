@@ -1,5 +1,5 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Thêm xe mới')
+@section('title', 'Create new model')
 @section('content')
     <section class="content">
         <div class="container-fluid">

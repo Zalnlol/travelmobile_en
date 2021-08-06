@@ -1,5 +1,5 @@
 @extends('layoutUser.layoutstaticpage')
-@section('titleweb', 'Quy trình cho thuê xe tự lái')
+@section('titleweb', 'Self-drive car rental process')
 
 @section('bodycode')
 

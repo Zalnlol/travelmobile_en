@@ -11,7 +11,7 @@
         <aside class="Map-List">
             <button id="map" onclick="return listclick()">
                 <i class="fa fa-th-list"></i>
-                <span style="font-weight: bold;font-size:12pt;"> Danh sách</span> 
+                <span style="font-weight: bold;font-size:12pt;"> Cars List</span> 
             </button>
         </aside>
 

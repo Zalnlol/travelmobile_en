@@ -1,6 +1,6 @@
 <!-- Lưu tại resources/views/user/index.blade.php -->
 @extends('layoutAdmin.layout')
-@section('title', 'Danh sách người dùng')
+@section('title', 'List of all accounts including admin')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -45,8 +45,6 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
-                      <th>Gender</th>
-                      <th>Birthday</th>
                       <th>Driver's license</th>
                       <th>Approval Driver's license</th>
                       <th>join date</th>
@@ -74,9 +72,11 @@
                             <a class="btn btn-primary btn-sm" href="{{ url('admin/update/'.$user->user_id) }}" >
                                 <i class="fas fa-pencil-alt"> Detail</i>
                             </a>
+                            @if ($user->user_id != $currentuser_id)
                             <a class="btn btn-danger btn-sm" href="{{ url('admin/delete/'.$user->user_id) }}" onclick="javascript:return confirm('Are you sure ?')">
                                 <i class="fas fa-trash"> Delete</i>
                             </a>
+                            @endif
                         </td>
                     </tr>
                     @endforeach

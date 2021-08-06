@@ -242,7 +242,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_4">
         <div id="cid_4" class="form-input-wide">
           <div id="text_4" class="form-html" data-component="text">
-            <h5><strong>Thông tin xe</strong></h5>
+            <h5><strong>Car Information</strong></h5>
           </div>
         </div>
       </li>
@@ -409,11 +409,11 @@ font-weight: bolder;}
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($crentals->auto == 1)
-            <option value="1"> Số tự động </option>
-            <option value="2">Số sàn</option>
+            <option value="1"> Automatic </option>
+            <option value="2">Manual</option>
             @else
-            <option value="2"> Số sàn </option>
-            <option value="1">Số tự động</option>
+            <option value="2"> Manual </option>
+            <option value="1">Automatic</option>
             @endif
             
           </select>
@@ -425,11 +425,11 @@ font-weight: bolder;}
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($crentals->fuel == 1)
-            <option value="1"> Xăng </option>
-            <option value="2"> Dầu diesel </option>
+            <option value="1"> Petrol </option>
+            <option value="2"> Diesel </option>
             @else
-            <option value="2"> Dầu diesel </option>
-            <option value="1"> Xăng </option>
+            <option value="2"> Diesel </option>
+            <option value="1"> Petrol </option>
             @endif
           </select>
         </div>
@@ -444,7 +444,7 @@ font-weight: bolder;}
             <input type="text" id="input_12" name="consumption"
                 placeholder="" data-type="input-textbox"
                 class="form-textbox" size="20" value="{{ $crentals->consumption }}" placeholder=" " data-component="textbox"
-                aria-labelledby="label_12" /> lít
+                aria-labelledby="label_12" /> litres
         </div>
     </li>
       <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
@@ -453,9 +453,9 @@ font-weight: bolder;}
       </br>
     </br>
       <span>
-        Min price is 400k and max is 500k.
+        Min price is 400k and max is 15000k.
     </span>
-    </br>
+    <br>
   
     <span style="opacity: 0.6">List price: <span id="giadexuat">500</span> K/day</span>
       </br>
@@ -663,7 +663,7 @@ font-weight: bolder;}
                 placeholder="Nhập thành phố, quận, địa chỉ..." value=" {{ $crentals->address }}">
             <datalist id="geoname">
                 <option>
-                    Your location
+                  Use my current location
                 </option>
             </datalist>
 
@@ -719,7 +719,7 @@ font-weight: bolder;}
           </li>
   
           <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
+            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(each km) </label>
             <div id="cid_6" class="form-input-wide">
               <input type="range" name="over_max_travel_cost" id="range_weight7" style="width: 200px" value="{{ $crentals->over_max_travel_cost }}" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
               <output  id="range_weight_disp7">{{ $crentals->over_max_travel_cost }}</output> K
@@ -821,7 +821,7 @@ font-weight: bolder;}
             <div id="cid_2" class="form-input-wide" style="margin-left: auto" style="margin-right: auto" >
               <div style="text-align:center"  data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField" style="width: 100px">
                 <button  style="margin-right: 32px"  type="submit" onclick="return redirect()->back()" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-                  Back
+                  Return
                 </button>
               
                     <button  style="text-align: center" type="submit" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">

@@ -100,7 +100,7 @@ function ConvertAdd(address) {
 
 function checktoado() {
     let str = document.getElementById("search_input").value
-    if (str == "Sử dụng vị trí của bạn") {
+    if (str == "Use your current location") {
         gps()
     }
     

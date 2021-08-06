@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb','Thay đổi ảnh xe')
+@section('titleweb','Edit car image')
     
 @section('bodycode')
 <script src="https://cdn02.jotfor.ms/js/vendor/imageinfo.js?v=3.3.26452" type="text/javascript"></script>
@@ -204,10 +204,10 @@ font-weight: bolder;}
         <div class="form-header-group  header-default">
           <div class="header-text httal htvam">
             <h2 id="header_47" class="form-header" data-component="header">
-              Ảnh xe <h5>(Phải đủ 4 hình)</h5>
+              Car images <h5>(Require at least 4)</h5>
             </h2>
             <div id="subHeader_47" class="form-subHeader">
-              Đăng nhiều hình ở các góc độ khác nhau để tăng thông tin cho xe của bạn.
+              Post multiple pictures at different angles to tell more about your vehicle's appearance.
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_55">
         <div id="cid_55" class="form-input-wide">
           <div id="text_55" class="form-html" data-component="text">
-            <h6><strong><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Ảnh 1</span></strong></h6>
+            <h6><strong><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Image 1</span></strong></h6>
             <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;">
               <span style="font-size: 14pt;">
                  
@@ -269,7 +269,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_52">
         <div id="cid_52" class="form-input-wide">
           <div id="text_52" class="form-html" data-component="text">
-            <h6><strong>Ảnh 2</strong></h6>
+            <h6><strong>Image 2</strong></h6>
             <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;">
                
             </div>
@@ -303,7 +303,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_56">
         <div id="cid_56" class="form-input-wide">
           <div id="text_56" class="form-html" data-component="text">
-            <h6><strong>Ảnh 3</strong></h6>
+            <h6><strong>Image 3</strong></h6>
             <div class="ddict_btn" style="top: 28px; left: 94.8px;">
                
             </div>
@@ -337,7 +337,7 @@ font-weight: bolder;}
       <li class="form-line" data-type="control_text" id="id_57">
         <div id="cid_57" class="form-input-wide">
           <div id="text_57" class="form-html" data-component="text">
-            <h6><strong>Ảnh 4</strong></h6>
+            <h6><strong>Image 4</strong></h6>
             <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;">
                
             </div>
@@ -373,11 +373,11 @@ font-weight: bolder;}
         <div id="cid_2" class="form-input-wide" style="margin-left: auto" style="margin-right: auto" >
           <div style="text-align:center"  data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField" style="width: 100px">
             <button  style="margin-right: 32px"  type="submit" onclick="{{ redirect()->back() }}" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-              Quay lại
+              Return
             </button>
           
                 <button  style="text-align: center" type="submit" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-                  Cập nhật
+                  Update
                   </button>
               </div>
 
@@ -405,20 +405,20 @@ font-weight: bolder;}
 
           if(result == false)
           {
-              alert('File ảnh 1 bạn chọn không phải là file hình!');
+              alert('First file is not an image file!');
               return false;
           }
           else
           {
               if(parseFloat(img.files[0].size/(1024*1024))>=3)
               {
-                  alert('File có kích thước tối đa là 3MB. File hiện tại: ' + parseFloat(img.files[0].size/(1024*1024)) );
+                  alert('Maximum file size is 3MB. Current file size is: ' + parseFloat(img.files[0].size/(1024*1024)) );
                   return false;
               }
           }
 
       }else{
-          alert('Bạn chưa chọn ảnh 1');
+          alert('You have not chosen 1st image');
           return false;
       }
       // return true;
@@ -430,20 +430,20 @@ font-weight: bolder;}
 
           if(result == false)
           {
-              alert('File ảnh 2 bạn chọn không phải là file hình!');
+              alert('Second file is not an image file!');
               return false;
           }
           else
           {
               if(parseFloat(img1.files[0].size/(1024*1024))>=3)
               {
-                  alert('File có kích thước tối đa là 3MB. File hiện tại: ' + parseFloat(img1.files[0].size/(1024*1024)) );
+                  alert('Maximum file size is 3MB. Current file size is: ' + parseFloat(img1.files[0].size/(1024*1024)) );
                   return false;
               }
           }
 
       }else{
-          alert('Bạn chưa chọn ảnh 2');
+          alert('You have not chosen 2nd image');
           return false;
       }
 
@@ -455,20 +455,20 @@ font-weight: bolder;}
 
           if(result == false)
           {
-              alert('File ảnh 3 bạn chọn không phải là file hình!');
+              alert('3rd file is not an image file!');
               return false;
           }
           else
           {
               if(parseFloat(img2.files[0].size/(1024*1024))>=3)
               {
-                  alert('File có kích thước tối đa là 3MB. File hiện tại: ' + parseFloat(img2.files[0].size/(1024*1024)) );
+                  alert('Maximum file size is 3MB. Current file size is: ' + parseFloat(img2.files[0].size/(1024*1024)) );
                   return false;
               }
           }
 
       }else{
-          alert('Bạn chưa chọn ảnh 3');
+          alert('You have not chosen 3rd image');
           return false;
       }
 
@@ -480,20 +480,20 @@ font-weight: bolder;}
 
           if(result == false)
           {
-              alert('File ảnh 4 bạn chọn không phải là file hình!');
+              alert('4th file is not an image file!');
               return false;
           }
           else
           {
               if(parseFloat(img3.files[0].size/(1024*1024))>=3)
               {
-                  alert('File có kích thước tối đa là 3MB. File hiện tại: ' + parseFloat(img3.files[0].size/(1024*1024)) );
+                  alert('Maximum file size is 3MB. Current file size is: ' + parseFloat(img3.files[0].size/(1024*1024)) );
                   return false;
               }
           }
 
       }else{
-          alert('Bạn chưa chọn ảnh 4');
+          alert('You have not chosen 4th image');
           return false;
       }
       return true;

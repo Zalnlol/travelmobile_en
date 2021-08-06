@@ -6,7 +6,7 @@
        
 
         <form action="{{ url('/searchcar/filter') }}" id="fillter" onsubmit="return savessesion()">
-            <label id="title-box">Phạm vi tìm kiếm</label>
+            <label id="title-box">Search Scope</label>
             <select id="phamvi" name="phamvi" class="form-control">
                 <option value="5">5km</option>
                 <option value="10" selected>10km</option>
@@ -14,16 +14,16 @@
                 <option value="30">30km</option>
             </select>
 
-            <label id="title-box" style="margin-top: 7%">Mức giá</label>
+            <label id="title-box" style="margin-top: 7%">Price</label>
             <div class="row">
-                <div class="col"><input type="text" id="min" name="min" class="form-control" placeholder="Tối thiểu"></div>
+                <div class="col"><input type="text" id="min" name="min" class="form-control" placeholder="Minimum "></div>
 
-                <div class="col"><input type="text" id="max" name="max" class="form-control" placeholder="Tối đa"></div>
+                <div class="col"><input type="text" id="max" name="max" class="form-control" placeholder="Maximum "></div>
 
             </div>
 
             {{-- Loai xe --}}
-            <label id="title-box">Loại xe</label>
+            <label id="title-box">Type of car</label>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="xe" style="width: 80px" onclick="return checkcars1()">
@@ -32,7 +32,7 @@
                             <img src="{{ asset('images/mf-4-mini.png') }}"
                                 style="width: 60px;padding: 23px 0px; margin-left: 10px;" alt="">
                         </div>
-                        <div style="text-align: center;" id="stylecar1">4 chỗ </div>
+                        <div style="text-align: center;" id="stylecar1">4 seats </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -42,7 +42,7 @@
                             <img src="{{ asset('images/mf-7-suv.png') }}"
                                 style="width: 60px;padding: 23px 0px; margin-left: 10px;" alt="">
                         </div>
-                        <div style="text-align: center;" id="stylecar2">7 chỗ </div>
+                        <div style="text-align: center;" id="stylecar2">7 seats </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -52,18 +52,18 @@
                             <img src="{{ asset('images/mf-pickup.png') }}"
                                 style="width: 60px;padding: 23px 0px; margin-left: 10px;" alt="">
                         </div>
-                        <div style="text-align: center;" id="stylecar3">Bán tãi </div>
+                        <div style="text-align: center;" id="stylecar3">Pickup Truck </div>
                     </div>
                 </div>
 
             </div>
 
 
-            <label id="title-box">Hãng xe</label>
+            <label id="title-box">Car company</label>
 
             {{-- {{$hangxe[1]->$name}} --}}
             <select name="brand" id="brand" class="form-control">
-                <option value="" >Tất cả</option>
+                <option value="" >All</option>
                 
                 @foreach ($hangxe as $xe ){
                     
@@ -73,11 +73,11 @@
                 
             </select>
 
-            <label id="title-box">Truyển động</label>
+            <label id="title-box">Transmission</label>
             <select name="auto" id="auto" class="form-control">
-                <option value="" >Tất cả</option>
-                <option value="1">Số tự động</option>
-                <option value="2" >Số sàn</option>
+                <option value="" >All</option>
+                <option value="1">Automatic Transmission Car</option>
+                <option value="2" >Manual Transmission Car</option>
             </select>
 
             {{-- {{dd($ngaygio['city'])}} --}}
@@ -92,8 +92,8 @@
             
             <div class="row" style="margin-top: 20px">
                 <div class="col" style="text-align: center">
-                    <input type="submit" class="btn btn-success" style="padding: 10px 30px" name="" id="ndndnd" value="Áp dụng">    
-                       <input type="button" class="btn btn-info" onclick="return boloc()" style="padding: 10px 30px" id="ndndnd" value="Bỏ lọc">
+                    <input type="submit" class="btn btn-success" style="padding: 10px 30px" name="" id="ndndnd" value="Apply">    
+                       <input type="button" class="btn btn-info" onclick="return boloc()" style="padding: 10px 30px" id="ndndnd" value="Remove filter">
                     
         
                 </div>

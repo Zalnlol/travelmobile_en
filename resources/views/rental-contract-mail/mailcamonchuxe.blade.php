@@ -31,30 +31,29 @@
     <div  style="background: white; width:50%; padding:2%; margin-top:2%; margin-left:25%">
         <div class="row">
             <div class="col">
-                <span>Xin chào, {{$name[0]}} !</span>
+                <span>Hi, {{$name[0]}} !</span>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <span> Yeahh yeahh Thế là đã hoàn thành thêm một chuyến đi nữa rồi chủ xe ơi. Tiền cọc của bạn sẽ được chúng tôi thanh toán trong giây lát. Cảm ơn bạn đã sử dụng dịch vụ</span>
+                <span> Yeahh yeahh So completed another trip, car owner. Your deposit will be paid by us in a moment. Thank you for using the service</span>
             </div>
         </div>
         <hr>
 
-
         <div class="row">
-            <div class="col"><i>Mọi thông tin thắc mắc xin vui lòng liên hệ cho chúng tôi theo địa chỉ</i></div>
+            <div class="col"><i>For any inquiries, please contact us at the address</i></div>
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Địa chỉ:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6"> 590 Cách Mạng Tháng Tám, phường 11, Quận 3, Thành phố Hồ Chí Minh</a></div>
+            <div class="col"><b>Address:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6">  590 Cach Mang Thang 8 Street, Ward 11, District 3, Ho Chi Minh City.</a></div>
             
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Số điện thoại:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
+            <div class="col"><b>Phone:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
         </div>
        
         <div class="row">
@@ -65,7 +64,6 @@
 
             
         </div>
-        
         
     </div>
 

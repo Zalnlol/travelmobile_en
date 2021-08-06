@@ -11,9 +11,10 @@ use App\Models\User;
 class AccountController extends Controller
 {   
     //tra ve view listing danh sach users
-    public function index(){
+    public function index(Request $request){
         $ds = User::paginate(10);
-        return view("Admin-User.index",compact('ds'));
+        $currentuser_id = $request->session()->get('login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d');
+        return view("Admin-User.index",compact('ds','currentuser_id'));
         
     }
 
