@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb','Chỉnh sửa xe')
+@section('titleweb','Edit car')
     
 @section('bodycode')
 
@@ -233,9 +233,9 @@ font-weight: bolder;}
         <div class="form-header-group  header-default">
           <div class="header-text httal htvam">
             <h2 id="header_1" class="form-header" data-component="header">
-               <strong> Cập nhật </strong>
+               <strong> Edit </strong>
             </h2>
-            <h6 style="color: red">Lưu ý không thể thay đổi những thông tin về xe</h6>
+            <h6 style="color: red">Warning can't edit information car after register</h6>
           </div>
         </div>
       </li>
@@ -263,7 +263,7 @@ font-weight: bolder;}
         @csrf
         <input type="hidden" id="input_5" name="car_id" data-type="input-textbox" readonly class="form-textbox" size="20" value="{{ $crentals->car_id }}" placeholder=" " data-component="textbox" aria-labelledby="label_5" />
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="input_5"> Biển số xe </label>
+          <label class="form-label form-label-top" id="label_5" for="input_5"> Plate id </label>
           <div id="cid_5" class="form-input-wide">
               <input type="text" id="input_5" name="plate_id" data-type="input-textbox"
                   class="form-textbox" size="20" value="{{ $crentals->plate_id }}" placeholder="" readonly data-component="textbox"
@@ -280,7 +280,7 @@ font-weight: bolder;}
     </li>
     
     <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-      <label class="form-label form-label-top" id="label_32" for="input_32"> Hãng xe </label>
+      <label class="form-label form-label-top" id="label_32" for="input_32"> Brand car </label>
       <div id="cid_32" class="form-input-wide">
           <select class="form-dropdown" id="input_6" name="brand" disabled onchange="return check()"
               style="width:150px" data-component="dropdown">
@@ -296,7 +296,7 @@ font-weight: bolder;}
   </li>
 
       <li class="form-line form-line-column form-col-2" data-type="control_dropdown" id="id_32">
-                            <label class="form-label form-label-top" id="label_32" for="input_32"> Mẫu xe </label>
+                            <label class="form-label form-label-top" id="label_32" for="input_32"> Model car </label>
                             <div id="cid_32" class="form-input-wide">
                                 <select class="form-dropdown" id="input_7" name="name" style="width:150px" disabled
                                     onchange="return checkgia()" data-component="dropdown">
@@ -306,7 +306,7 @@ font-weight: bolder;}
                         </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="seatnum"> Số ghế </label>
+        <label class="form-label form-label-top" id="label_10" for="seatnum"> Seatnum </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             <option value="{{ $crentals->seatnum }}" >{{ $crentals->seatnum }}</option>
@@ -334,7 +334,7 @@ font-weight: bolder;}
 
      
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="model_year"> Năm sản xuất </label>
+        <label class="form-label form-label-top" id="label_10" for="model_year"> Model year </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             <option value="{{ $crentals->model_year }}" >{{ $crentals->model_year }}</option>
@@ -405,7 +405,7 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="auto"> Truyền động </label>
+        <label class="form-label form-label-top" id="label_10" for="auto"> Auto </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($crentals->auto == 1)
@@ -421,7 +421,7 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="fuel"> Loại nhiên liệu </label>
+        <label class="form-label form-label-top" id="label_10" for="fuel"> Fuel </label>
         <div id="cid_10" class="form-input-wide">
           <select class="form-dropdown" id="input_10" disabled name="" style="width:150px" data-component="dropdown">
             @if ($crentals->fuel == 1)
@@ -436,9 +436,9 @@ font-weight: bolder;}
       </li>
 
       <li class="form-line form-line-column form-col-8" data-type="control_textbox" id="id_12">
-        <label class="form-label form-label-top" id="label_12" for="consumption"> Mức tiêu thụ </label>
+        <label class="form-label form-label-top" id="label_12" for="consumption"> Consumption </label>
         <span style="opacity: 0.6;">
-            Số lít nhiên liệu cho quãng đường 100km(Mức tiêu thụ thấp nhất là 5 và tối đa là 30).
+          Consumption for distance 100km(Min consumption is 5 and max is 30).
         </span>
         <div id="cid_12" class="form-input-wide">
             <input type="text" id="input_12" name="consumption"
@@ -448,16 +448,16 @@ font-weight: bolder;}
         </div>
     </li>
       <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
-        <label class="form-label form-label-top" id="label_13" for="rent_price"> Đơn giá thuê mặc định </label>
-        <span style="opacity: 0.6;">Đơn giá áp dụng cho tất cả các ngày. Bạn có thuể tuỳ chỉnh giá khác cho các ngày đặc biệt (cuối tuần, lễ, tết...) trong mục quản lý xe sau khi đăng kí.</span>
+        <label class="form-label form-label-top" id="label_13" for="rent_price"> List price </label>
+        <span style="opacity: 0.6;">The price apply for all day. Maybe you can edit for special day(weekend, holiday, newyear...) in the update button after register.</span>
       </br>
     </br>
       <span>
-        Mức giá thấp nhất là 400K và cao nhất là 15000K.
+        Min price is 400k and max is 500k.
     </span>
     </br>
   
-        <span style="opacity: 0.6">Giá đề xuất: 500K/ngày</span>
+    <span style="opacity: 0.6">List price: <span id="giadexuat">500</span> K/day</span>
       </br>
     </br>
         <div id="cid_13" class="form-input-wide">
@@ -468,7 +468,7 @@ font-weight: bolder;}
     
 
       <li class="form-line" data-type="control_textarea" id="id_36">
-        <label class="form-label form-label-top" id="label_36" for="description">Mô tả</label>
+        <label class="form-label form-label-top" id="label_36" for="description">Description</label>
         <div id="cid_36" class="form-input-wide">
           <textarea class="form-control ckeditor" rows="4" id="description" name="description" placeholder="" cols="40" rows="6">{{ $crentals->description }}</textarea>
         </div>
@@ -496,7 +496,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line" data-type="control_checkbox" id="id_26">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Tính năng </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Feature </label>
         </li>
 
         <div class="row">
@@ -513,7 +513,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="convertible" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Cửa sổ trời </label>
+                <label id="label_input_26_0" for="input_26_0"> Convertible </label>
               </span>
             </div>
           </div>
@@ -553,7 +553,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="gps" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Định vị GPS </label>
+                <label id="label_input_26_0" for="input_26_0"> GPS </label>
               </span>
             </div>
           </div>
@@ -569,7 +569,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="usb" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Khe cắm USB </label>
+                <label id="label_input_26_0" for="input_26_0"> USB </label>
               </span>
             </div>
           </div>
@@ -592,7 +592,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="kid_chair" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Ghế trẻ em </label>
+                <label id="label_input_26_0" for="input_26_0"> Kid chair </label>
               </span>
             </div>
           </div>
@@ -608,7 +608,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="map" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Bản đồ </label>
+                <label id="label_input_26_0" for="input_26_0"> Map </label>
               </span>
             </div>
           </div>
@@ -629,7 +629,7 @@ font-weight: bolder;}
                 @else
                 <input type="checkbox" aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="camera" value="1" />
                 @endif
-                <label id="label_input_26_0" for="input_26_0"> Camera lùi </label>
+                <label id="label_input_26_0" for="input_26_0"> Behind camera </label>
               </span>
             </div>
           </div>
@@ -648,41 +648,22 @@ font-weight: bolder;}
           </div>
         </li>
 
-        {{-- <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Giảm giá </label>
-          </li>
-
-        <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="input_5"> Giảm giá thuê tuần (% trên đơn gián)  </label>
-          <div id="cid_5" class="form-input-wide">
-            <input type="range" name="discount_weekly" id="range_weight" style="width: 200px" value="{{ $crentals->discount_weekly }}" min="1" max="75" oninput="range_weight_disp.value = range_weight.value">
-            <output  id="range_weight_disp">{{ $crentals->discount_weekly }}</output> %
-          </div>
-        </li>
-        <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Giảm giá thuê tháng (% trên đơn tháng) </label>
-          <div id="cid_6" class="form-input-wide">
-            <input type="range" name="discount_monthly" id="range_weight2" style="width: 200px" value="{{ $crentals->discount_monthly }}" min="1" max="75" oninput="range_weight_disp2.value = range_weight2.value">
-            <output  id="range_weight_disp2">{{ $crentals->discount_monthly }}</output> %
-          </div>
-        </li> --}}
-
       </ul>
       
       <li class="form-line" data-type="control_checkbox" id="id_26">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Địa chỉ xe </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Address </label>
     </li>
 
     <li class="form-line form-line-column form-col-3" data-type="control_textbox" id="id_7">
-        <label class="form-label form-label-top" id="label_7" for="address"> Địa chỉ mặc định giao nhận xe
+        <label class="form-label form-label-top" id="label_7" for="address"> Default address for deliver and receive
         </label>
-        <span style="opacity: 0.6;">Lưu ý điền đầy đủ thông tin địa chỉ để khách hàng giao nhận xe.</span>
+        <span style="opacity: 0.6;">Must be carefully note for deliver and receive.</span>
         <div id="cid_7" class="form-input-wide">
             <input type="text" name="address" id="search_input" list="geoname" onchange="return checktoado()"
                 placeholder="Nhập thành phố, quận, địa chỉ..." value=" {{ $crentals->address }}">
             <datalist id="geoname">
                 <option>
-                    Sử dụng vị trí của bạn
+                    Your location
                 </option>
             </datalist>
 
@@ -695,11 +676,11 @@ font-weight: bolder;}
       
       <ul class="form-section">  
       <li class="form-line" data-type="control_checkbox" id="id_26">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Giao xe tận nơi </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Shipping car </label>
         </li>
         
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="max_ship_distance"> Quãng đường giao xe tối đa </label>
+          <label class="form-label form-label-top" id="label_5" for="max_ship_distance"> Distance shipping </label>
           <div id="cid_5" class="form-input-wide">
             <input type="range" name="max_ship_distance" id="range_weight3" style="width: 200px" value="{{ $crentals->max_ship_distance }}" min="5" max="50" oninput="range_weight_disp3.value = range_weight3.value">
             <output  id="range_weight_disp3">{{ $crentals->max_ship_distance }}</output> km
@@ -707,7 +688,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="shipping_price_km"> Phí giao nhận xe cho mỗi km </label>
+          <label class="form-label form-label-top" id="label_6" for="shipping_price_km"> Shipping price/km </label>
           <div id="cid_6" class="form-input-wide">
             <input type="range" name="shipping_price_km" id="range_weight4" style="width: 200px" value="{{ $crentals->shipping_price_km }}" min="1" max="20" oninput="range_weight_disp4.value = range_weight4.value">
             <output  id="range_weight_disp4">{{ $crentals->shipping_price_km }}</output> K
@@ -715,7 +696,7 @@ font-weight: bolder;}
         </li>
 
         <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="free_ship_distance"> Miễn phí giao nhận xe trong vòng </label>
+          <label class="form-label form-label-top" id="label_6" for="free_ship_distance"> Freeship distance </label>
           <div id="cid_6" class="form-input-wide">
             <input type="range" name="free_ship_distance" id="range_weight5" style="width: 200px" value="{{ $crentals->free_ship_distance }}" min="0" max="50" oninput="range_weight_disp5.value = range_weight5.value">
             <output  id="range_weight_disp5">{{ $crentals->free_ship_distance }}</output> km
@@ -726,11 +707,11 @@ font-weight: bolder;}
 
       <ul class="form-section">  
         <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Giới hạn số km </label>
+          <label class="form-label form-label-top" id="label_24" for="input_24"> Distance limit </label>
           </li>
           
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-            <label class="form-label form-label-top" id="label_5" for="max_travel_distance"> Số km tối đa trong 1 ngày </label>
+            <label class="form-label form-label-top" id="label_5" for="max_travel_distance"> Max travel distance/day </label>
             <div id="cid_5" class="form-input-wide">
               <input type="range" name="max_travel_distance" id="range_weight6" style="width: 200px" value="{{ $crentals->max_travel_distance }}" min="300" max="500" oninput="range_weight_disp6.value = range_weight6.value">
               <output  id="range_weight_disp6">{{ $crentals->max_travel_distance }}</output> km
@@ -738,7 +719,7 @@ font-weight: bolder;}
           </li>
   
           <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Phí vượt giới hạn (tính mỗi km) </label>
+            <label class="form-label form-label-top" id="label_6" for="over_max_travel_cost"> Over max travel cost(every km) </label>
             <div id="cid_6" class="form-input-wide">
               <input type="range" name="over_max_travel_cost" id="range_weight7" style="width: 200px" value="{{ $crentals->over_max_travel_cost }}" min="1" max="5" oninput="range_weight_disp7.value = range_weight7.value">
               <output  id="range_weight_disp7">{{ $crentals->over_max_travel_cost }}</output> K
@@ -748,10 +729,10 @@ font-weight: bolder;}
         </ul>
 
         <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Điều khoản thuê xe </label>
+          <label class="form-label form-label-top" id="label_24" for="input_24"> Rules </label>
           </li>
       <li class="form-line" data-type="control_textarea" style="margin-top: -20px" id="id_36">
-        <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Ghi rõ các yêu cầu để khách có thể thuê xe.</label>
+        <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Note the rules carefully for customer.</label>
         <div id="cid_36" class="form-input-wide">
           <textarea type="text" rows="5" id="rules" class="form-textarea ckeditor" name="rules" placeholder="  Không sử dụng xe vào mục đích phi pháp. Lái xe cẩn thận, giữ xe sạch sẽ, trả xe đúng giờ. Phụ thu 500k nếu có mùi thuốc trong xe." cols="40" rows="6" >{{ $crentals->rules }}</textarea>
         </div>
@@ -780,7 +761,7 @@ font-weight: bolder;}
 
       @if ($crentals->status == 2)
       <li class="form-line" data-type="control_checkbox" id="id_26">
-      <label class="form-label form-label-top" id="label_24" for="input_24"> Trạng thái  </label>
+      <label class="form-label form-label-top" id="label_24" for="input_24"> Status  </label>
       </li>
 
       <div class="row">
@@ -793,7 +774,7 @@ font-weight: bolder;}
               <span class="dragger-item">
               </span>
               <input type="checkbox"  aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="approval" value="1"/>
-              <label id="label_input_26_0" for="input_26_0"> Tạm ngưng </label> 
+              <label id="label_input_26_0" for="input_26_0"> Maintenance </label> 
             </span>
           </div>
         </div>
@@ -802,7 +783,7 @@ font-weight: bolder;}
 
       @if ($crentals->status == 4)
       <li class="form-line" data-type="control_checkbox" id="id_26">
-      <label class="form-label form-label-top" id="label_24" for="input_24"> Trạng thái  </label>
+      <label class="form-label form-label-top" id="label_24" for="input_24"> Status  </label>
       </li>
 
       <div class="row">
@@ -816,7 +797,7 @@ font-weight: bolder;}
               </span>
             
               <input type="checkbox"  aria-describedby="label_26" class="form-checkbox" id="input_26_0" name="approval" value="1" checked/>
-              <label id="label_input_26_0" for="input_26_0"> Tạm ngưng </label>    
+              <label id="label_input_26_0" for="input_26_0"> Maintenance </label>    
               
             </span>
           </div>
@@ -840,11 +821,11 @@ font-weight: bolder;}
             <div id="cid_2" class="form-input-wide" style="margin-left: auto" style="margin-right: auto" >
               <div style="text-align:center"  data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField" style="width: 100px">
                 <button  style="margin-right: 32px"  type="submit" onclick="return redirect()->back()" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-                  Quay lại
+                  Back
                 </button>
               
                     <button  style="text-align: center" type="submit" class="form-submit-button form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-                      Cập nhật
+                      Update
                       </button>
                   </div>
 

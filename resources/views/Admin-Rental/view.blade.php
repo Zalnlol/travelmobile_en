@@ -429,11 +429,11 @@ font-weight: bolder;}
       </li>
       <li class="form-line form-line-column form-col-9" data-type="control_textbox" id="id_13">
         <label class="form-label form-label-top" id="label_13" for="rent_price"> List price once day </label>
-        <span style="opacity: 0.6;">Đơn giá áp dụng cho tất cả các ngày. Bạn có thuể tuỳ chỉnh giá khác cho các ngày đặc biệt (cuối tuần, lễ, tết...) trong mục quản lý xe sau khi đăng kí.</span>
+        <span style="opacity: 0.6;">The price apply for all day. Maybe you can edit for special day(weekend, holiday, newyear...) in the update button after register.</span>
       </br>
     </br>
   
-        <span style="opacity: 0.6">Giá đề xuất: 500K/ngày</span>
+        <span style="opacity: 0.6">List price: 500K/day</span>
       </br>
     </br>
         <div id="cid_13" class="form-input-wide">
@@ -621,25 +621,6 @@ font-weight: bolder;}
           </div>
         </li>
 
-        {{-- <li class="form-line" data-type="control_checkbox" id="id_26">
-          <label class="form-label form-label-top" id="label_24" for="input_24"> Giảm giá </label>
-          </li>
-
-        <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_5">
-          <label class="form-label form-label-top" id="label_5" for="input_5"> Giảm giá thuê tuần (% trên đơn gián)  </label>
-          <div id="cid_5" class="form-input-wide">
-            <input type="range" name="discount_weekly" id="range_weight" disabled style="width: 200px" value="{{ $rentalview->discount_weekly }}" min="1" max="75" oninput="range_weight_disp.value = range_weight.value">
-            <output  id="range_weight_disp">{{ $rentalview->discount_weekly }}</output> %
-          </div>
-        </li>
-        <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_6">
-          <label class="form-label form-label-top" id="label_6" for="discount_monthly"> Giảm giá thuê tháng (% trên đơn tháng) </label>
-          <div id="cid_6" class="form-input-wide">
-            <input type="range" name="discount_monthly" id="range_weight2" disabled style="width: 200px" value="{{ $rentalview->discount_monthly }}" min="1" max="75" oninput="range_weight_disp2.value = range_weight2.value">
-            <output  id="range_weight_disp2">{{ $rentalview->discount_monthly }}</output> %
-          </div>
-        </li> --}}
-
       </ul>
         <li class="form-line" data-type="control_checkbox" id="id_26">
           <label class="form-label form-label-top" id="label_24" for="input_24"> Address </label>
@@ -647,7 +628,7 @@ font-weight: bolder;}
 
         <li class="form-line form-line-column form-col-3" data-type="control_textbox" id="id_7">
           <label class="form-label form-label-top" id="label_7" for="address"> Default address for deliver and receive </label>
-          <span style="opacity: 0.6;">Lưu ý điền đầy đủ thông tin địa chỉ để khách hàng giao nhận xe.</span>
+          <span style="opacity: 0.6;">Must be carefully note for deliver and receive.</span>
           <div id="cid_7" class="form-input-wide">
             <input type="text" id="label_7" name="address" disabled value="{{ $rentalview->address }}" data-type="input-textbox" class="form-textbox" size="20"/>
           </div>
@@ -714,7 +695,7 @@ font-weight: bolder;}
           <label class="form-label form-label-top" id="label_24" for="input_24"> Rules</label>
           </li>
       <li class="form-line" data-type="control_textarea" style="margin-top: -20px" id="id_36">
-        <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Ghi rõ các yêu cầu để khách có thể thuê xe.</label>
+        <label class="form-label form-label-top" id="label_36" for="rules" style="opacity: 0.6">Note the rules carefully for customer.</label>
         <div id="cid_36" class="form-input-wide">
           <textarea type="text" rows="5" id="rules" class="form-textarea ckeditor" readonly name="rules" placeholder="  Không sử dụng xe vào mục đích phi pháp. Lái xe cẩn thận, giữ xe sạch sẽ, trả xe đúng giờ. Phụ thu 500k nếu có mùi thuốc trong xe." cols="40" rows="6" >{{ $rentalview->rules }}</textarea>
         </div>

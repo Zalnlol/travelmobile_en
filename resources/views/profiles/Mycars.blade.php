@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Xe của tôi')
+@section('titleweb', 'My cars')
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +12,7 @@
 
             <div class="col-sm-3" style="text-align: right ; ">
                 <a href="{{url('/user/mycars')}}">
-                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Danh sách xe</span>
+                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">My cars</span>
                 </a>
             </div>
 
@@ -20,19 +20,19 @@
 
             <div class="col-sm-2" style="text-align: left; margin-left:5% ">
                 <a href="{{url('/user/mycars/triplist')}}">
-                    <span id="title-nav2" >Danh sách chuyến</span>
+                    <span id="title-nav2" >Trip list</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/register') }}">
-                    <span id="title-nav2">Đăng ký xe</span>
+                    <span id="title-nav2">Register car</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/history') }}">
-                    <span id="title-nav2">Lịch sử cho thuê</span>
+                    <span id="title-nav2">History for rental</span>
                 </a>
             </div>
 
@@ -53,7 +53,7 @@
 						  <thead class="thead-dark">
 						    <tr>
 						      <th>Status</th>
-						      <th style="width: 15%;">Biển số</th>
+						      <th style="width: 15%;">Plate id</th>
 						      <th>Brand car</th>
 						      <th>Model car</th>
                               <th>Join date</th>
