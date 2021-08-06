@@ -1,5 +1,5 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Thêm hãng xe mới')
+@section('title', 'Create new brand')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 @section('content')
     <section class="content">

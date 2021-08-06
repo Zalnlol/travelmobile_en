@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Thông báo</title>
+    <title>Notification</title>
 </head>
 <body>
 
@@ -28,19 +28,19 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Thông báo</h4>
+                <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Notification</h4>
                 <br>
                 <div style="text-align: center;">
                     <i class="fa fa-exclamation-triangle fa-2x" style="color: red"></i>
 
-                    <span style="font-size: 13pt"> Rất tiếc đã có người đặt xe rồi. Bạn vui lòng chọn khung thời gian khác giúp mình nhé</span>
+                    <span style="font-size: 13pt"> Sorry, someone has already booked. Please help me choose another time frame</span>
                 </div>
 
                 <br>
             </div>
             <div class="modal-footer">
                 <a href="{{ route('homepage') }}">
-                    <button type="button" class="btn btn-primary">Trở về trang chủ</button>
+                    <button type="button" class="btn btn-primary">Back to home page</button>
                 </a>
 
             </div>

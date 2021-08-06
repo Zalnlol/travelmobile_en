@@ -31,30 +31,28 @@
     <div  style="background: white; width:50%; padding:2%; margin-top:2%; margin-left:25%">
         <div class="row">
             <div class="col">
-                <span>Xin chào, {{$name[0]}} !</span>
+                <span>Hi, {{$name[0]}} !</span>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <span>Bạn đã hoàn thành chuyến đi, đừng quên để lại đánh giá cho chủ xe nhé. Cảm ơn bạn đã tin tưởng sử dụng dịch vụ của chúng tôi. Chúng tôi rất hân hạnh phục vụ quý khách trong nhận chuyến đi sau</span>
+                <span>You have completed the trip, do not forget to leave a review for the car owner. Thank you for using our service. We are pleased to serve you on your next trip</span>
             </div>
         </div>
         <hr>
-
-
         <div class="row">
-            <div class="col"><i>Mọi thông tin thắc mắc xin vui lòng liên hệ cho chúng tôi theo địa chỉ</i></div>
+            <div class="col"><i>For any inquiries, please contact us at the address</i></div>
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Địa chỉ:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6"> 590 Cách Mạng Tháng Tám, phường 11, Quận 3, Thành phố Hồ Chí Minh</a></div>
+            <div class="col"><b>Address:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6">  590 Cach Mang Thang 8 Street, Ward 11, District 3, Ho Chi Minh City.</a></div>
             
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Số điện thoại:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
+            <div class="col"><b>Phone:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
         </div>
        
         <div class="row">

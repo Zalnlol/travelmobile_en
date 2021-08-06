@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Trang chủ')
+@section('titleweb', 'Home Page')
 
 
 @section('bodycode')

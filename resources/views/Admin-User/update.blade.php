@@ -1,5 +1,5 @@
 @extends('layoutAdmin.layout')
-@section('title', 'Chi tiết tài khoản')
+@section('title', 'Edit account')
 @section('content')
     <section class="content">
         <div class="container-fluid">

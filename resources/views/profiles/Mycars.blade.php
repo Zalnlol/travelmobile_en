@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Xe của tôi')
+@section('titleweb', 'My cars')
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,30 +11,31 @@
         <div class="row" style="box-shadow: 0px 0px 20px rgb(233, 227, 227); height:auto">
 
             <div class="col-sm-3" style="text-align: right ; ">
-                <a href="{{url('/user/mycars')}}">
-                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Danh sách xe</span>
+                <a href="{{ url('/user/mycars') }}">
+                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Cars List</span>
                 </a>
             </div>
 
 
 
             <div class="col-sm-2" style="text-align: left; margin-left:5% ">
-                <a href="{{url('/user/mycars/triplist')}}">
-                    <span id="title-nav2" >Danh sách chuyến</span>
+                <a href="{{ url('/user/mycars/triplist') }}">
+                    <span id="title-nav2" >Trips List</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/register') }}">
-                    <span id="title-nav2">Đăng ký xe</span>
+                    <span id="title-nav2">Car registration</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/history') }}">
-                    <span id="title-nav2">Lịch sử cho thuê</span>
+                    <span id="title-nav2" >Rental history</span>
                 </a>
             </div>
+
 
         </div>
 
@@ -43,7 +44,7 @@
 
             <div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">My cars</h2>
+					<h2 class="heading-section"></h2>
 				</div>
 			</div>
 			<div class="row">

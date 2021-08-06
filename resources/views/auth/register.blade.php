@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Đăng ký')
+@section('title', 'Register')
 @section('content')
 <body id="body">
     <div class="card" id="login-card">
@@ -62,12 +62,12 @@
                 </div>
                 <br>
                 <div class="text-center">
-                    <a href="login"><b>Tôi là thành viên</b></a>
+                    <a href="login"><b>I'm a member</b></a>
                 </div>
                 <hr>
                 <br>
                 <div id="btn" class="text-center">
-                    <b>Hoặc đăng nhập bằng tài khoản</b>
+                    <b>Or log in with your account</b>
                     <a href="{{url('auth/facebook')}}">
                         <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-facebook"></i></button>
                     </a>

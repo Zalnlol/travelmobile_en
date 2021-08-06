@@ -1,6 +1,6 @@
 <!-- Lưu tại resources/views/user/index.blade.php -->
 @extends('layoutAdmin.layout')
-@section('title', 'Danh sách người dùng')
+@section('title', 'List of all accounts including admin')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">

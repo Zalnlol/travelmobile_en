@@ -31,13 +31,12 @@
     <div  style="background: white; width:50%; padding:2%; margin-top:2%; margin-left:25%">
         <div class="row">
             <div class="col">
-                <span>Xin chào, {{$datamail['name']}} !</span>
+                <span>Hi, {{$datamail['name']}} !</span>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <span>Cảm ơn bạn đã đặt xe trên hệ thống của Travel Mobile. Chúng tôi đã nhận được khoản thanh toán cọc
-                    của bạn cho dịch vụ thuê xe tự lái. Đơn hàng như sau </span>
+                <span>Thank you for booking a car on Travel Mobile's system. We have received your deposit payment for self-drive car rental. Orders are as follows </span>
             </div>
         </div>
         <hr>
@@ -51,36 +50,35 @@
                     <div class="col"><b>{{$datamail['carname']}}</b></div>
                 </div>
                 <div class="row">
-                    <div class="col"><b> Ngày thuê</b> {{$datamail['start_date']}} giờ</div>
-                    <div class="col"><b> Ngày trả</b> {{$datamail['end_date']}} giờ</div>
+                    <div class="col"><b> Start date </b> {{$datamail['start_date']}} h</div>
+                    <div class="col"><b> End date</b> {{$datamail['end_date']}} h</div>
                 </div>
                 <div class="row">
-                    <div class="col"><b>Thành tiền: </b> {{$datamail['rental_price']}}đ</div>
-                    <div class="col"><b>Đặt cọc: </b> {{$datamail['deposit']}}đ</div>
+                    <div class="col"><b>Total: </b> {{$datamail['rental_price']}}đ</div>
+                    <div class="col"><b>Deposit: </b> {{$datamail['deposit']}}đ</div>
                 </div>
             </div>
         </div>
         <hr>
 
         <div class="row">
-            <div class="col"><b>Vui lòng giữ máy điện thoại, chủ xe của chúng tôi sẽ liên hệ để xác nhận với bạn trong
-                    ít phút</b></div>
+            <div class="col"><b>Please stay on the phone, our owner will contact you to confirm with you in a few minutes</b></div>
         </div>
         <hr>
 
         <div class="row">
-            <div class="col"><i>Mọi thông tin thắc mắc xin vui lòng liên hệ cho chúng tôi theo địa chỉ</i></div>
+            <div class="col"><i>For any inquiries, please contact us at the address</i></div>
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Địa chỉ:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6"> 590 Cách Mạng Tháng Tám, phường 11, Quận 3, Thành phố Hồ Chí Minh</a></div>
+            <div class="col"><b>Address:</b> <a href="https://goo.gl/maps/HNC3wxS3UBVQG8uT6">  590 Cach Mang Thang 8 Street, Ward 11, District 3, Ho Chi Minh City.</a></div>
             
         </div>
 
 
         <div class="row">
-            <div class="col"><b>Số điện thoại:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
+            <div class="col"><b>Phone:</b> <a href="tel:+0375515719"> 0375515719</a> </div>
         </div>
        
         <div class="row">

@@ -15,13 +15,13 @@
                         <form action="{{ url('/searchcar') }}">
                             <div class="row">
                                 <div class="col">
-                                    <span class="tile-search1">Địa điểm</span>
+                                    <span class="tile-search1">Place</span>
                                     <input type="text" name="city" id="search_input" list="geoname"
-                                        onchange="return checktoado()" placeholder="Nhập thành phố, quận, địa chỉ..."
+                                        onchange="return checktoado()" placeholder="Input city, address"
                                         value="{{ $searchinfo['city'] }}">
                                     <datalist id="geoname">
                                         <option>
-                                            Sử dụng vị trí của bạn
+                                            Use your current location
                                         </option>
                                     </datalist>
                                     <input type="text" name="lat" id="lat" value="{{ $searchinfo['lat'] }}" hidden>
@@ -29,7 +29,7 @@
                                 </div>
 
                                 <div class="col">
-                                    <span class="tile-search1">Bắt đầu</span>
+                                    <span class="tile-search1">Start day</span>
 
                                     <input type="text" style="border: none; width: 6.5rem ;"
                                         value="{{ $searchinfo['checkin'] }}" id="inputCheckIn" name="checkin">
@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="col">
-                                    <span class="tile-search1">Kết thúc</span>
+                                    <span class="tile-search1">End date</span>
 
                                     <input type="text" style="border: none; width: 6.5rem ;" id="inputCheckOut"
                                         name="checkout" value="{{ $searchinfo['checkout'] }}">
@@ -99,8 +99,8 @@
 
 
                                 <div class="col-lg-2">
-                                    <input type="button"  onclick="return checksubmit1()" name="sb" id="sb"  value="Áp dụng">
-                                    <button type="submit" id="nutsubmit1"   hidden >Áp dụng</button>
+                                    <input type="button"  onclick="return checksubmit1()" name="sb" id="sb"  value="Apply">
+                                    <button type="submit" id="nutsubmit1"   hidden >Apply</button>
                                 </div>
                             </div>
                         </form>
@@ -118,7 +118,7 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <span style="color: rgb(141, 132, 132)">Đã tìm thấy {{count($listcardiplay)}} xe</span>
+                <span style="color: rgb(141, 132, 132)">Found {{count($listcardiplay)}} cars</span>
                 <div id="listcard">
                     <x-carlist :danhsachxe1="$listcardiplay" :searchinfo="$searchinfo"></x-carlist>
                 </div>

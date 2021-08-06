@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Thông tin xe')
+@section('titleweb', 'Car Profile')
 <script defer src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyDi2UpnA_1qXGCGZmnqx-UegSOGAmIspD8" type="text/javascript"></script>
 @section('bodycode')
     <style>
@@ -89,11 +89,11 @@
                     </div>
                     <div class="col-sm-9">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-4">
                                 <img src="{{ url('images/icon-chair.png') }}" class="icon">
                                 <span id="text-icon"> Seat: {{ $carlist['seatnum'] }}</span>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-8">
                                 <img src="{{ url('images/icon-trans.png') }}" style="width: 45px">
                                 <span id="text-icon"> Transmission:
                                     @if ($carlist['auto'] == 1)
@@ -118,7 +118,7 @@
                     </div>
                     <div class="col-sm-9">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-4">
                                 <img src="{{ url('images/icon-diesel.png') }}" style="width: 30px">
                                 <span id="text-icon">Fuel:
                                     @if ($carlist['fuel'] == 1)
@@ -128,7 +128,7 @@
                                     @endif
                                 </span>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-8">
                                 <img src="{{ url('images/fuel.png') }}" class="icon">
                                 <span id="text-icon">Fuel consumption level {{$carlist['consumption']}}L/100km
                                    
@@ -222,10 +222,10 @@
                     </div>
                     <div class="col-sm-9">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-8">
                                 <img class="img-ico" src="{{ url('images/cmnd.png') }}"
                                     style="width: 20px; height: 20px; margin-right: 10px;">
-                                <span id="text-icon"> CMND và GPLX (đối chiếu)</span>
+                                <span id="text-icon"> ID card and driving license (compare)</span>
                             </div>
 
 
@@ -238,7 +238,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left"> TÀI SẢN THẾ CHẤP</span>
+                        <span id="title-left"> SECURITY DEPOSIT</span>
                     </div>
                     <div class="col-sm-9">
                         <span> 15 triệu (tiền mặt/chuyển khoản cho chủ xe khi nhận xe)
@@ -249,7 +249,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left">ĐIỀU KHOẢN</span>
+                        <span id="title-left">RULES</span>
                     </div>
                     <div class="col-sm-9" id="dieukhoan">
 
@@ -259,7 +259,7 @@
 
                 <div class="row" style="margin-top: 3%;">
                     <div class="col-sm-3">
-                        <span id="title-left"> Chủ xe</span>
+                        <span id="title-left"> Car owner</span>
                     </div>
                     <div class="col-sm-9">
                         <a href="{{ url('/user/profile/' . $chuxe['user_id']) }}" style="color: black">
@@ -272,7 +272,7 @@
                                 <div class="col-sm-8">
                                     <span style="font-weight: bold">{{ $chuxe['name'] }}</span>
                                     <br>
-                                    <span>Lưu ý: Số điện thoại của chủ xe sẽ được hiển thị sau khi đặt cọc.</span>
+                                    <span>Note: The phone number of the car owner will be displayed after the deposit.</span>
                                 </div>
                             </div>
 
@@ -283,7 +283,7 @@
 
                 {{-- Đánh giá --}}
                 <div class="row">
-                    <div class="col" style="font-weight:bold; font-size:15pt">ĐÁNH GIÁ</div>
+                    <div class="col" style="font-weight:bold; font-size:15pt">RATE</div>
 
                 </div>
 
@@ -297,13 +297,13 @@
                         <div class="row">
                             <div class="col" style="text-align: center">
                                 <span id="price">{{ $carlist['rent_price'] }}K</span>
-                                <span style=" font-size: 12pt;font-weight: bold;">/ngày</span>
+                                <span style=" font-size: 12pt;font-weight: bold;">/day</span>
                             </div>
                         </div>
 
                         <form action="{{ url('user/searchcar/profile/checkday') }}" id="updatethoigian">
                             <span id="start-end-day">
-                                Ngày bắt đầu
+                                Start date
                             </span>
                             <br>
                             <div class="row" style="margin-top: 3%">
@@ -344,7 +344,7 @@
                             </div>
                             <br>
                             <span id="start-end-day">
-                                Ngày kết thúc
+                                End Date
                             </span>
                             <br>
                             <div class="row" style="margin-top: 3%">
@@ -385,7 +385,7 @@
                             <div class="row" style="margin-top: 5%">
                                 <div class="col" style="text-align: center">
                                     <input type="submit" id="capnhatthoigian" class="btn btn-success"
-                                        value="Cập nhật lại thời gian">
+                                        value="Update">
                                 </div>
                             </div>
 
@@ -393,23 +393,22 @@
 
                         <div class="row" style="margin-top: 5%" hidden id="thongbaothoigian">
                             <div class="col" style="text-align: center">
-                                <span style="color: red"> Xe có chuyến trong khoảng thời gian bạn chọn, vui lòng chọn
-                                    lại</span>
+                                <span style="color: red"> The car has a trip in the time period you choose, please choose again</span>
                             </div>
                         </div>
                         <div class="row" style="margin-top: 5%" hidden id="giaonhanxe">
                             <div class="col" style="text-align: center">
-                                <span style="color: red"> Thời gian giao hoặc nhận xe không đúng</span>
+                                <span style="color: red"> The time of delivery or receipt of the car is not correct</span>
                             </div>
                         </div>
                         <div class="row" style="margin-top: 5%" hidden id="thoigianquakhu">
                             <div class="col" style="text-align: center">
-                                <span style="color: red"> Khoảng thời gian bắt đầu / kết thúc không hợp lệ</span>
+                                <span style="color: red"> Invalid start or end time period</span>
                             </div>
                         </div>
                         <div class="row" id="thoi-gian">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Thời gian giao nhận xe</span>
+                                <span style="margin-left:2%">Delivery and return time</span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span>5:00-23:00</span>
@@ -417,7 +416,7 @@
                         </div>
                         <br>
                         <span id="start-end-day">
-                            Địa điểm giao xe
+                            Car delivery location
                         </span>
                         <br>
 
@@ -431,24 +430,24 @@
                         <div class="row" style="margin-top: 3%; ">
                             <div class="col">
                                 <input type="checkbox" id="checkgiaoxe" onclick="return ktcheck()">
-                                <span style="font-size: 13pt;"> Giao xe tận nơi </span>
+                                <span style="font-size: 13pt;"> Car delivery to the place </span>
                             </div>
 
                         </div>
 
 
                         <div class="row" id="thoi-gian">
-                            <div class="col-sm-7">
-                                <span style="margin-left:2%">Miễn phí trong vòng </span>
+                            <div class="col-sm-8">
+                                <span style="margin-left:2%">Free delivery within the first  </span>
                             </div>
-                            <div class="col-sm-5" style="text-align: right">
+                            <div class="col-sm-4" style="text-align: right">
                                 <span><span id="bankinhgiao">{{ $carlist['free_ship_distance'] }}</span>
-                                    km đầu tiên</span>
+                                    km </span>
                             </div>
                         </div>
                         <div class="row" id="thoi-gian1">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Phí giao nhận xe (2 chiều) </span>
+                                <span style="margin-left:2%">Car delivery fee (2-way) </span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span id="phigiaoxe">{{ $carlist['shipping_price_km'] }}000</span>
@@ -459,39 +458,39 @@
 
 
                         <span id="start-end-day">
-                            Giới hạn km
+                            Daily kilometer limit
                         </span>
                         <br>
                         <div class="row" style="margin-top: 3%; ">
                             <div class="col">
-                                <span style="font-size: 12pt;">Tối đa <span
-                                        style="font-weight: bold;">{{ $carlist['max_travel_distance'] }}</span>km/ngày.
-                                    Phí <span
+                                <span style="font-size: 12pt;">Maximum <span
+                                        style="font-weight: bold;">{{ $carlist['max_travel_distance'] }}</span>km/day.
+                                        Charge <span
                                         style="font-weight: bold;">{{ $carlist['over_max_travel_cost'] }}K</span>/km
-                                    vượt giới hạn.</span>
+                                        if over limit.</span>
                             </div>
                         </div>
                         <br>
                         <span id="start-end-day">
-                            Chi tiết giá
+                            Price details
                         </span>
                         <br>
                         <div class="row" id="gia-thue">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Đơn giá thuê</span>
+                                <span style="margin-left:2%">Rental unit price</span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span id="dongiathue" name="dongiathue">880 000 </span>
-                                <span>đ/ ngày</span>
+                                <span>đ/ day</span>
                             </div>
                         </div>
                         <div class="row" id="gia-thue">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Phí dịch vụ</span>
+                                <span style="margin-left:2%">Service charge</span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span id="phidichvu" name="phidichvu">61 600 </span>
-                                <span>đ/ ngày</span>
+                                <span>đ/ day</span>
                             </div>
                         </div>
 
@@ -502,20 +501,20 @@
                         </div>
                         <div class="row" id="gia-thue1">
                             <div class="col-sm-6">
-                                <span style="margin-left:2%">Tổng phí thuê xe</span>
+                                <span style="margin-left:2%">Total car rental fee</span>
                             </div>
                             <div class="col-sm-6" style="text-align: right">
                                 <span id="tongcong" name="tongcong">941 600 </span>
                                 x
                                 <span id="days" name="days" style="font-weight: bold">1</span>
-                                <span style="font-weight: bold">ngày</span>
+                                <span style="font-weight: bold">days</span>
                             </div>
                         </div>
 
                         <br>
                         <div class="row" id="gia-thue1">
                             <div class="col-sm-6">
-                                <span style="margin-left:2%">Phí giao xe</span>
+                                <span style="margin-left:2%">Delivery fee</span>
                             </div>
                             <div class="col-sm-6" style="text-align: right">
                                 <span id="giaoxe" name="giaoxe"> </span>
@@ -531,7 +530,7 @@
                         </div>
                         <div class="row" id="gia-thue2">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Tổng cộng</span>
+                                <span style="margin-left:2%">Total</span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span id="tongphithuexe" name="tongphithuexe">941 600 </span>
@@ -545,7 +544,7 @@
                         </div>
                         <div class="row" id="gia-thue2">
                             <div class="col-sm-7">
-                                <span style="margin-left:2%">Đặt cọc</span>
+                                <span style="margin-left:2%">Deposit</span>
                             </div>
                             <div class="col-sm-5" style="text-align: right">
                                 <span id="datcoc" name="datcoc">941 600 </span>
@@ -570,7 +569,7 @@
                             <div class="row" style="margin: 5% 0%; ">
                                 <div class="col-sm-12">
                                     <input type="button" style="padding:10px ; font-weight: bold; "
-                                        class="form-control btn btn-success" id="nutao" value="ĐẶT XE"
+                                        class="form-control btn btn-success" id="nutao" value="BOOKING NOW"
                                         onclick="return checkgplx()">
 
                                     <input type="submit" id="nutsubmit" hidden>
@@ -610,19 +609,19 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Thông báo</h4>
+                        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Notification</h4>
                         <br>
                         <div style="text-align: center;">
                             <i class="fa fa-exclamation-triangle fa-2x" style="color: red"></i>
 
-                            <span style="font-size: 13pt"> Bạn cần đăng nhập để tiếp tục</span>
+                            <span style="font-size: 13pt"> You need to log in to continue</span>
                         </div>
 
                         <br>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ url('/login') }}">
-                            <button type="button" class="btn btn-primary">Đăng nhập</button>
+                            <button type="button" class="btn btn-primary">Log in</button>
                         </a>
 
                     </div>
@@ -641,18 +640,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Thông báo</h4>
+                        <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">Notification</h4>
                         <br>
                         <div style="text-align: center;">
                             <i class="fa fa-exclamation-triangle fa-2x" style="color: red"></i>
-                            <span style="font-size: 13pt"> Bạn cần xác thực GPLX để có thể đặt xe</span>
+                            <span style="font-size: 13pt"> You need to verify your license to be able to book a car</span>
                         </div>
 
                         <br>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ url('user/profile/' . $user_id . '/edit') }}">
-                            <button type="button" class="btn btn-primary">Đồng ý</button>
+                            <button type="button" class="btn btn-primary">Verify now</button>
                         </a>
 
                     </div>

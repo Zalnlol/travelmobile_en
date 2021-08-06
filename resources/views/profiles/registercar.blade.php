@@ -1,5 +1,5 @@
 @extends('layoutUser.layout')
-@section('titleweb', 'Đăng ký xe')
+@section('titleweb', 'Car registration')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/mytrip.css') }}">
     <link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.26399" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -285,10 +285,9 @@
 @section('bodycode')
     <div style="padding: 8% 0%; ">
         <div class="row" style="box-shadow: 0px 0px 20px rgb(233, 227, 227); height:auto">
-
             <div class="col-sm-3" style="text-align: right ; ">
                 <a href="{{ url('/user/mycars') }}">
-                    <span id="title-nav2">Danh sách xe</span>
+                    <span id="title-nav2">Cars List</span>
                 </a>
             </div>
 
@@ -296,21 +295,22 @@
 
             <div class="col-sm-2" style="text-align: left; margin-left:5% ">
                 <a href="{{ url('/user/mycars/triplist') }}">
-                    <span id="title-nav2">Danh sách chuyến</span>
+                    <span id="title-nav2" >Trips List</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/register') }}">
-                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Đăng ký xe</span>
+                    <span id="title-nav2" style="color: #2E7093; border-bottom: solid #2E7093; ">Car registration</span>
                 </a>
             </div>
 
             <div class="col-sm-2" style="text-align: left; margin-left:1% ">
                 <a href="{{ url('/user/mycars/history') }}">
-                    <span id="title-nav2">Lịch sử cho thuê</span>
+                    <span id="title-nav2" >Rental history</span>
                 </a>
             </div>
+
 
         </div>
 
